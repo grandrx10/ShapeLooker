@@ -1,0 +1,34 @@
+# Qt-specific files to ignore
+*.pro.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+*.moc
+moc_*.cpp
+qrc_*.cpp
+ui_*.h
+Makefile*
+*build-*
+
+# Build directories
+debug/
+release/
+
+# Compiled object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Qt Creator temporary files
+*.autosave
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+Thumbs.db
