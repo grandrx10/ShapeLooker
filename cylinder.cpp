@@ -54,15 +54,20 @@ void Cylinder::setScale(double scale) {
 
 void Cylinder::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidget *) {
     painter->save(); // Save the current painter state
+    QPen originalPen = painter->pen();
     painter->scale(m_scale, m_scale); // Apply uniform scaling
+    if (m_scale != 0) {
+        originalPen.setWidthF(originalPen.widthF() / m_scale);
+        painter->setPen(originalPen);
+    }
 
-    int ellipseWidth = m_radius * 2;
-    int ellipseHeight = m_radius / 2;  // Aspect ratio for a 3D look
+    double ellipseWidth = m_radius * 2;
+    double ellipseHeight = m_radius / 2;
 
     if (type == "U") {
         // Bottom ellipse
         painter->setBrush(this->blue);
-        painter->setPen(Qt::black);
+        painter->setPen(originalPen);
         painter->drawEllipse(QPointF(0, m_height / 2), m_radius, ellipseHeight);
 
         // Cylinder side
@@ -70,7 +75,7 @@ void Cylinder::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidge
         painter->drawRect(-m_radius, -m_height / 2, ellipseWidth, m_height);
 
         // Top ellipse
-        painter->setPen(Qt::black);
+        painter->setPen(originalPen);
         painter->setBrush(this->light_blue);
         painter->drawEllipse(QPointF(0, -m_height / 2), m_radius, ellipseHeight);
 
@@ -80,7 +85,7 @@ void Cylinder::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidge
     }
     else if (type == "B") {
         painter->setBrush(this->blue);
-        painter->setPen(Qt::black);
+        painter->setPen(originalPen);
         painter->drawEllipse(QPointF(m_height/2, 0), ellipseHeight, m_radius);
 
         // Cylinder side
@@ -88,7 +93,7 @@ void Cylinder::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidge
         painter->drawRect(-m_height/2, -m_radius, m_height, 2*m_radius);
 
         // Right ellipse
-        painter->setPen(Qt::black);
+        painter->setPen(originalPen);
         painter->setBrush(this->light_blue);
         painter->drawEllipse(QPointF(-m_height/2, 0), ellipseHeight, m_radius);
 
@@ -99,7 +104,7 @@ void Cylinder::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidge
     }
     else if (type == "T") {
         painter->setBrush(this->blue);
-        painter->setPen(Qt::black);
+        painter->setPen(originalPen);
         painter->drawRect(-m_height/2, -m_height/2, m_height, m_height);
 
         // Draw the circle

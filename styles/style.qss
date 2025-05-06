@@ -1,0 +1,186 @@
+/* ==================== */
+/* MAIN WINDOW STYLING  */
+/* ==================== */
+QWidget {
+    color: black;
+    background-color: #FAF6E9; /* Custom off-white */
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ==================== */
+/* SEPARATOR LINES      */
+/* ==================== */
+/* Horizontal Line */
+QFrame[frameShape="4"] {
+    background-color: black;
+    border: none;
+    min-height: 5px;
+    max-height: 5px;
+    margin: 2px 0;
+}
+
+/* Vertical Line */
+QFrame[frameShape="5"] {
+    background-color: black;
+    border: none;
+    min-width: 5px;
+    max-width: 5px;
+    margin: 0 2px;
+}
+
+/* ==================== */
+/* MENU BAR             */
+/* ==================== */
+QMenuBar {
+    background-color: #FAF6E9; /* Off-white */
+    border-bottom: 2px solid black;
+    padding: 2px;
+}
+
+QMenuBar::item {
+    padding: 8px 15px;
+    background-color: transparent;
+    border-radius: 3px;
+    margin: 0 2px;
+}
+
+QMenuBar::item:hover {
+    background-color: white; /* Pure white on hover */
+}
+
+QMenuBar::item:pressed {
+    background-color: #e0e0e0;
+}
+
+/* ==================== */
+/* DROPDOWN MENUS       */
+/* ==================== */
+QMenu {
+    background-color: #FAF6E9; /* Off-white */
+    border: 2px solid black;
+    padding: 4px;
+    margin: 0;
+}
+
+QMenu::item {
+    padding: 8px 30px 8px 25px;
+    background-color: transparent;
+    margin: 2px 0;
+}
+
+QMenu::item:hover {
+    background-color: white; /* Pure white on hover */
+    color: black;
+}
+
+QMenu::item:selected {
+    background-color: white;
+}
+
+QMenu::separator {
+    height: 2px;
+    background-color: black;
+    margin: 5px 0;
+}
+
+QMenu::indicator {
+    width: 16px;
+    height: 16px;
+}
+
+/* ==================== */
+/* COMBO BOXES          */
+/* ==================== */
+QComboBox {
+    background-color: rgb(72, 202, 228);
+    color: black;
+    border: 2px solid #3a9db3;
+    border-radius: 4px;
+    padding: 5px 30px 5px 10px; /* Right padding makes space for arrow */
+    min-width: 100px;
+}
+
+/* Drop-down button area */
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 25px;
+    border-left: 2px solid #3a9db3;
+    background: transparent;
+}
+
+/* Arrow icon - using built-in Qt resource */
+QComboBox::down-arrow {
+    image: url(:/qt-project.org/styles/commonstyle/images/down-arrow.png);
+    width: 12px;
+    height: 12px;
+}
+
+/* When dropdown is open */
+QComboBox:on {
+    background-color: rgb(62, 192, 218);
+}
+
+/* Dropdown menu styling */
+QComboBox QAbstractItemView {
+    border: 2px solid black;
+    background: #FAF6E9;
+    selection-background-color: white;
+    padding: 4px;
+    outline: 0px;
+    min-width: 150px; /* Minimum width of dropdown */
+}
+
+/* ==================== */
+/* INPUT FIELDS         */
+/* ==================== */
+QLineEdit, QSpinBox, QDoubleSpinBox {
+    background-color: rgb(72, 202, 228); /* Custom blue */
+    color: black;
+    border: 2px solid #3a9db3;
+    border-radius: 4px;
+    padding: 5px 8px;
+    selection-background-color: rgb(62, 192, 218);
+}
+
+QLineEdit:hover, QSpinBox:hover, QDoubleSpinBox:hover {
+    background-color: rgb(62, 192, 218);
+}
+
+/* ==================== */
+/* SCROLLBARS           */
+/* ==================== */
+QScrollBar:vertical {
+    border: none;
+    background: #FAF6E9;
+    width: 12px;
+    margin: 0;
+}
+
+QScrollBar::handle:vertical {
+    background: rgb(72, 202, 228);
+    min-height: 20px;
+    border-radius: 6px;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0;
+    background: none;
+}
+
+/* ==================== */
+/* MISC ELEMENTS        */
+/* ==================== */
+QToolTip {
+    background-color: #FAF6E9;
+    color: black;
+    border: 2px solid black;
+    padding: 5px;
+    opacity: 240;
+}
+
+QStatusBar {
+    background-color: #FAF6E9;
+    border-top: 2px solid black;
+    padding: 3px;
+}

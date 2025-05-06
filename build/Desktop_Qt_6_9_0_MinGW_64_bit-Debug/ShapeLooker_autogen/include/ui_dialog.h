@@ -16,7 +16,6 @@
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QGridLayout>
-#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
@@ -27,7 +26,6 @@ QT_BEGIN_NAMESPACE
 class Ui_Dialog
 {
 public:
-    QHBoxLayout *horizontalLayout;
     QGridLayout *gridLayout_2;
     QGridLayout *gridLayout;
     QLabel *label;
@@ -56,9 +54,7 @@ public:
         if (Dialog->objectName().isEmpty())
             Dialog->setObjectName("Dialog");
         Dialog->resize(839, 574);
-        horizontalLayout = new QHBoxLayout(Dialog);
-        horizontalLayout->setObjectName("horizontalLayout");
-        gridLayout_2 = new QGridLayout();
+        gridLayout_2 = new QGridLayout(Dialog);
         gridLayout_2->setObjectName("gridLayout_2");
         gridLayout = new QGridLayout();
         gridLayout->setObjectName("gridLayout");
@@ -190,9 +186,6 @@ public:
 
 
         gridLayout_2->addLayout(gridLayout_4, 1, 0, 1, 3);
-
-
-        horizontalLayout->addLayout(gridLayout_2);
 
 
         retranslateUi(Dialog);

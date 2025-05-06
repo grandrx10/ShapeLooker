@@ -14,9 +14,9 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 set(PROJECT_SOURCES
         main.cpp
-        dialog.cpp
-        dialog.h
-        dialog.ui
+
+
+
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -24,6 +24,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         cylinder.h cylinder.cpp
+        mainwindow.h mainwindow.cpp mainwindow.ui
+        styles.qrc
 
 
 

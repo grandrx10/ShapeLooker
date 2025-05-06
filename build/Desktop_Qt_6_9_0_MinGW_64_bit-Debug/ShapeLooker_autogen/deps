@@ -178,10 +178,10 @@ ShapeLooker_autogen/timestamp: \
 	C:/Qt/6.9.0/mingw_64/include/QtGui/qtransform.h \
 	C:/Qt/6.9.0/mingw_64/include/QtGui/qwindowdefs.h \
 	C:/Qt/6.9.0/mingw_64/include/QtGui/qwindowdefs_win.h \
-	C:/Qt/6.9.0/mingw_64/include/QtWidgets/QDialog \
 	C:/Qt/6.9.0/mingw_64/include/QtWidgets/QFileDialog \
 	C:/Qt/6.9.0/mingw_64/include/QtWidgets/QGraphicsItem \
 	C:/Qt/6.9.0/mingw_64/include/QtWidgets/QGraphicsView \
+	C:/Qt/6.9.0/mingw_64/include/QtWidgets/QMainWindow \
 	C:/Qt/6.9.0/mingw_64/include/QtWidgets/QMessageBox \
 	C:/Qt/6.9.0/mingw_64/include/QtWidgets/QWidget \
 	C:/Qt/6.9.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
@@ -192,9 +192,11 @@ ShapeLooker_autogen/timestamp: \
 	C:/Qt/6.9.0/mingw_64/include/QtWidgets/qgraphicsitem.h \
 	C:/Qt/6.9.0/mingw_64/include/QtWidgets/qgraphicsscene.h \
 	C:/Qt/6.9.0/mingw_64/include/QtWidgets/qgraphicsview.h \
+	C:/Qt/6.9.0/mingw_64/include/QtWidgets/qmainwindow.h \
 	C:/Qt/6.9.0/mingw_64/include/QtWidgets/qmessagebox.h \
 	C:/Qt/6.9.0/mingw_64/include/QtWidgets/qscrollarea.h \
 	C:/Qt/6.9.0/mingw_64/include/QtWidgets/qsizepolicy.h \
+	C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtabwidget.h \
 	C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtwidgets-config.h \
 	C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtwidgetsexports.h \
 	C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -652,8 +654,9 @@ ShapeLooker_autogen/timestamp: \
 	C:/Users/richa/OneDrive/Documents/ShapeLooker/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/ShapeLooker_autogen/moc_predefs.h \
 	C:/Users/richa/OneDrive/Documents/ShapeLooker/cylinder.cpp \
 	C:/Users/richa/OneDrive/Documents/ShapeLooker/cylinder.h \
-	C:/Users/richa/OneDrive/Documents/ShapeLooker/dialog.cpp \
-	C:/Users/richa/OneDrive/Documents/ShapeLooker/dialog.h \
 	C:/Users/richa/OneDrive/Documents/ShapeLooker/main.cpp \
-	C:/Users/richa/OneDrive/Documents/ShapeLooker/dialog.ui \
+	C:/Users/richa/OneDrive/Documents/ShapeLooker/mainwindow.cpp \
+	C:/Users/richa/OneDrive/Documents/ShapeLooker/mainwindow.h \
+	C:/Users/richa/OneDrive/Documents/ShapeLooker/styles.qrc \
+	C:/Users/richa/OneDrive/Documents/ShapeLooker/mainwindow.ui \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe

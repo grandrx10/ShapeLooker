@@ -1,21 +1,71 @@
-/* Example dark theme */
+/* Main window and widgets */
 QWidget {
-    background: #2D2D2D;
-    color: white;
-    font-family: "Segoe UI";
+    color: black;                     /* WindowText */
+    background-color: #FAF6E9;        /* Window (custom warm white) */
 }
 
-QPushButton {
-    background: #4A90E2;
-    border: none;
-    padding: 8px;
+/* Dropdowns/QComboBox */
+QComboBox {
+    background-color: rgb(72, 202, 228);  /* Base (custom blue) */
+    color: black;                         /* Text */
+    border: 1px solid #3a9db3;
     border-radius: 4px;
+    padding: 2px 25px 2px 5px;
+    min-width: 6em;
+}
+
+QComboBox:hover {
+    background-color: rgb(62, 192, 218);  /* Slightly darker on hover */
+}
+
+QComboBox::drop-down {
+    width: 20px;
+    border-left: 1px solid #3a9db3;
+    background: transparent;
+}
+
+QComboBox::down-arrow {
+    image: url(:/icons/arrow_down.png);  /* Optional: custom arrow */
+    width: 12px;
+    height: 12px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: rgb(72, 202, 228);  /* Keep dropdown items blue */
+    color: black;
+    selection-background-color: rgb(52, 182, 208);  /* Darker selection */
+    outline: 0;  /* Remove focus border */
+}
+
+/* Buttons */
+QPushButton {
+    background-color: rgb(72, 202, 228);  /* Button (custom blue) */
+    color: black;                         /* ButtonText */
+    border: 1px solid #3a9db3;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-weight: 500;
 }
 
 QPushButton:hover {
-    background: #5AA0F2;
+    background-color: rgb(62, 192, 218);  /* Darker hover */
+    border-color: #2a8da3;
 }
 
-QLabel {
-    color: white;
+QPushButton:pressed {
+    background-color: rgb(52, 182, 208);  /* Even darker pressed */
+}
+
+QPushButton:disabled {
+    background-color: #c0e6f0;            /* Desaturated blue */
+    color: #555;
+}
+
+/* Optional: Style other inputs consistently */
+QLineEdit, QSpinBox {
+    background-color: rgb(72, 202, 228);  /* Base */
+    color: black;
+    border: 1px solid #3a9db3;
+    border-radius: 4px;
+    padding: 2px 5px;
 }
