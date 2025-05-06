@@ -1,0 +1,21 @@
+/* Example dark theme */
+QWidget {
+    background: #2D2D2D;
+    color: white;
+    font-family: "Segoe UI";
+}
+
+QPushButton {
+    background: #4A90E2;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+QPushButton:hover {
+    background: #5AA0F2;
+}
+
+QLabel {
+    color: white;
+}
