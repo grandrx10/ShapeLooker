@@ -333,15 +333,45 @@
 	"HEADERS" : 
 	[
 		[
+			"C:/Users/richa/OneDrive/Documents/ShapeLooker/DrawableItem.h",
+			"MU",
+			"EWIEGA46WW/moc_DrawableItem.cpp",
+			null
+		],
+		[
+			"C:/Users/richa/OneDrive/Documents/ShapeLooker/circle.h",
+			"MU",
+			"EWIEGA46WW/moc_circle.cpp",
+			null
+		],
+		[
 			"C:/Users/richa/OneDrive/Documents/ShapeLooker/cylinder.h",
 			"MU",
 			"EWIEGA46WW/moc_cylinder.cpp",
 			null
 		],
 		[
+			"C:/Users/richa/OneDrive/Documents/ShapeLooker/drawingboard.h",
+			"MU",
+			"EWIEGA46WW/moc_drawingboard.cpp",
+			null
+		],
+		[
+			"C:/Users/richa/OneDrive/Documents/ShapeLooker/line.h",
+			"MU",
+			"EWIEGA46WW/moc_line.cpp",
+			null
+		],
+		[
 			"C:/Users/richa/OneDrive/Documents/ShapeLooker/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
+			null
+		],
+		[
+			"C:/Users/richa/OneDrive/Documents/ShapeLooker/rect.h",
+			"MU",
+			"EWIEGA46WW/moc_rect.cpp",
 			null
 		]
 	],
@@ -417,16 +447,28 @@
 	"SOURCES" : 
 	[
 		[
+			"C:/Users/richa/OneDrive/Documents/ShapeLooker/circle.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/richa/OneDrive/Documents/ShapeLooker/cylinder.cpp",
 			"MU",
 			null
 		],
+		[
+			"C:/Users/richa/OneDrive/Documents/ShapeLooker/drawingboard.cpp",
+			"MU",
+			null
+		],
+		[ "C:/Users/richa/OneDrive/Documents/ShapeLooker/line.cpp", "MU", null ],
 		[ "C:/Users/richa/OneDrive/Documents/ShapeLooker/main.cpp", "MU", null ],
 		[
 			"C:/Users/richa/OneDrive/Documents/ShapeLooker/mainwindow.cpp",
 			"MU",
 			null
-		]
+		],
+		[ "C:/Users/richa/OneDrive/Documents/ShapeLooker/rect.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

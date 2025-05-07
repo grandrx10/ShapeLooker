@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-daa67979f6e1af824879.json",
+					"jsonFile" : "directory-.-Debug-52eb3ef7dc4347580466.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ShapeLooker::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ShapeLooker-Debug-05b88731452bece8c10c.json",
+					"jsonFile" : "target-ShapeLooker-Debug-9b2db574ba88921130d8.json",
 					"name" : "ShapeLooker",
 					"projectIndex" : 0
 				},

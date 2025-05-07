@@ -150,22 +150,28 @@ QLineEdit:hover, QSpinBox:hover, QDoubleSpinBox:hover {
 /* ==================== */
 /* SCROLLBARS           */
 /* ==================== */
-QScrollBar:vertical {
-    border: none;
+QScrollBar:horizontal, QScrollBar:vertical {
+    border: 2px solid #888888;  /* Set a 2px border with a light gray color */
     background: #FAF6E9;
-    width: 12px;
-    margin: 0;
 }
 
-QScrollBar::handle:vertical {
-    background: rgb(72, 202, 228);
+QScrollBar::handle {
+    background: #FAF6E9;
     min-height: 20px;
     border-radius: 6px;
 }
 
-QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+QScrollBar::add-line, QScrollBar::sub-line {
     height: 0;
     background: none;
+}
+
+/* ==================== */
+/* GRAPHICS VIEW        */
+/* ==================== */
+
+QGraphicsView {
+    border: 2px solid black;
 }
 
 /* ==================== */
@@ -184,3 +190,5 @@ QStatusBar {
     border-top: 2px solid black;
     padding: 3px;
 }
+
+

@@ -1,17 +1,8 @@
 #include "cylinder.h"
 #include <algorithm>
 
-Cylinder::Cylinder(QGraphicsItem *parent)
-    : QGraphicsItem(parent)
-{
-    // Initialize any default values here if needed
-}
-
-QRectF Cylinder::boundingRect() const
-{
-    // I want to erase the entire graphicsView
-    const qreal largeSize = diagramSize;
-    return QRectF(-largeSize, -largeSize, 2*largeSize, 2*largeSize);
+Cylinder::Cylinder() {
+    deletable = false;
 }
 
 void Cylinder::updateScaleToFit() {
@@ -27,13 +18,13 @@ void Cylinder::updateScaleToFit() {
     double maxDimension = std::max(cylinderWidth, cylinderHeight);
     m_scale = targetSize / maxDimension;
 
-    this->update(); // Trigger repaint
+    owner->update(); // Trigger repaint
 }
 
 
 void Cylinder::setType(QString shapeType) {
     type = shapeType;
-    this->update();
+    owner->update();
 }
 
 void Cylinder::setRadius(double radius) {
@@ -49,10 +40,10 @@ void Cylinder::setHeight(double height) {
 
 void Cylinder::setScale(double scale) {
     m_scale = scale;
-    this->update();
+    owner->update();
 }
 
-void Cylinder::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidget *) {
+void Cylinder::draw(QPainter *painter) {
     painter->save(); // Save the current painter state
     QPen originalPen = painter->pen();
     painter->scale(m_scale, m_scale); // Apply uniform scaling

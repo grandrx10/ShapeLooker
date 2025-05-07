@@ -11,6 +11,7 @@ ShapeLooker_autogen/timestamp: \
 	C:/Qt/6.9.0/mingw_64/include/QtCore/q20type_traits.h \
 	C:/Qt/6.9.0/mingw_64/include/QtCore/q20utility.h \
 	C:/Qt/6.9.0/mingw_64/include/QtCore/q23utility.h \
+	C:/Qt/6.9.0/mingw_64/include/QtCore/qabstracteventdispatcher.h \
 	C:/Qt/6.9.0/mingw_64/include/QtCore/qalgorithms.h \
 	C:/Qt/6.9.0/mingw_64/include/QtCore/qanystringview.h \
 	C:/Qt/6.9.0/mingw_64/include/QtCore/qarraydata.h \
@@ -20,6 +21,7 @@ ShapeLooker_autogen/timestamp: \
 	C:/Qt/6.9.0/mingw_64/include/QtCore/qatomic.h \
 	C:/Qt/6.9.0/mingw_64/include/QtCore/qatomic_cxx11.h \
 	C:/Qt/6.9.0/mingw_64/include/QtCore/qbasicatomic.h \
+	C:/Qt/6.9.0/mingw_64/include/QtCore/qbasictimer.h \
 	C:/Qt/6.9.0/mingw_64/include/QtCore/qbindingstorage.h \
 	C:/Qt/6.9.0/mingw_64/include/QtCore/qbytearray.h \
 	C:/Qt/6.9.0/mingw_64/include/QtCore/qbytearrayalgorithms.h \
@@ -39,13 +41,17 @@ ShapeLooker_autogen/timestamp: \
 	C:/Qt/6.9.0/mingw_64/include/QtCore/qcontainerinfo.h \
 	C:/Qt/6.9.0/mingw_64/include/QtCore/qcontainertools_impl.h \
 	C:/Qt/6.9.0/mingw_64/include/QtCore/qcontiguouscache.h \
+	C:/Qt/6.9.0/mingw_64/include/QtCore/qcoreevent.h \
 	C:/Qt/6.9.0/mingw_64/include/QtCore/qdarwinhelpers.h \
 	C:/Qt/6.9.0/mingw_64/include/QtCore/qdatastream.h \
 	C:/Qt/6.9.0/mingw_64/include/QtCore/qdatetime.h \
+	C:/Qt/6.9.0/mingw_64/include/QtCore/qdeadlinetimer.h \
 	C:/Qt/6.9.0/mingw_64/include/QtCore/qdebug.h \
 	C:/Qt/6.9.0/mingw_64/include/QtCore/qdir.h \
 	C:/Qt/6.9.0/mingw_64/include/QtCore/qdirlisting.h \
+	C:/Qt/6.9.0/mingw_64/include/QtCore/qelapsedtimer.h \
 	C:/Qt/6.9.0/mingw_64/include/QtCore/qendian.h \
+	C:/Qt/6.9.0/mingw_64/include/QtCore/qeventloop.h \
 	C:/Qt/6.9.0/mingw_64/include/QtCore/qexceptionhandling.h \
 	C:/Qt/6.9.0/mingw_64/include/QtCore/qfile.h \
 	C:/Qt/6.9.0/mingw_64/include/QtCore/qfiledevice.h \
@@ -148,6 +154,7 @@ ShapeLooker_autogen/timestamp: \
 	C:/Qt/6.9.0/mingw_64/include/QtCore/qversiontagging.h \
 	C:/Qt/6.9.0/mingw_64/include/QtCore/qxptype_traits.h \
 	C:/Qt/6.9.0/mingw_64/include/QtCore/qyieldcpu.h \
+	C:/Qt/6.9.0/mingw_64/include/QtGui/QPainter \
 	C:/Qt/6.9.0/mingw_64/include/QtGui/qaction.h \
 	C:/Qt/6.9.0/mingw_64/include/QtGui/qbitmap.h \
 	C:/Qt/6.9.0/mingw_64/include/QtGui/qbrush.h \
@@ -180,6 +187,7 @@ ShapeLooker_autogen/timestamp: \
 	C:/Qt/6.9.0/mingw_64/include/QtGui/qwindowdefs_win.h \
 	C:/Qt/6.9.0/mingw_64/include/QtWidgets/QFileDialog \
 	C:/Qt/6.9.0/mingw_64/include/QtWidgets/QGraphicsItem \
+	C:/Qt/6.9.0/mingw_64/include/QtWidgets/QGraphicsSceneMouseEvent \
 	C:/Qt/6.9.0/mingw_64/include/QtWidgets/QGraphicsView \
 	C:/Qt/6.9.0/mingw_64/include/QtWidgets/QMainWindow \
 	C:/Qt/6.9.0/mingw_64/include/QtWidgets/QMessageBox \
@@ -191,6 +199,7 @@ ShapeLooker_autogen/timestamp: \
 	C:/Qt/6.9.0/mingw_64/include/QtWidgets/qframe.h \
 	C:/Qt/6.9.0/mingw_64/include/QtWidgets/qgraphicsitem.h \
 	C:/Qt/6.9.0/mingw_64/include/QtWidgets/qgraphicsscene.h \
+	C:/Qt/6.9.0/mingw_64/include/QtWidgets/qgraphicssceneevent.h \
 	C:/Qt/6.9.0/mingw_64/include/QtWidgets/qgraphicsview.h \
 	C:/Qt/6.9.0/mingw_64/include/QtWidgets/qmainwindow.h \
 	C:/Qt/6.9.0/mingw_64/include/QtWidgets/qmessagebox.h \
@@ -647,16 +656,25 @@ ShapeLooker_autogen/timestamp: \
 	C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
 	C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wctype.h \
 	C:/Users/richa/OneDrive/Documents/ShapeLooker/CMakeLists.txt \
+	C:/Users/richa/OneDrive/Documents/ShapeLooker/DrawableItem.h \
 	C:/Users/richa/OneDrive/Documents/ShapeLooker/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake \
 	C:/Users/richa/OneDrive/Documents/ShapeLooker/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake \
 	C:/Users/richa/OneDrive/Documents/ShapeLooker/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeRCCompiler.cmake \
 	C:/Users/richa/OneDrive/Documents/ShapeLooker/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeSystem.cmake \
 	C:/Users/richa/OneDrive/Documents/ShapeLooker/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/ShapeLooker_autogen/moc_predefs.h \
+	C:/Users/richa/OneDrive/Documents/ShapeLooker/circle.cpp \
+	C:/Users/richa/OneDrive/Documents/ShapeLooker/circle.h \
 	C:/Users/richa/OneDrive/Documents/ShapeLooker/cylinder.cpp \
 	C:/Users/richa/OneDrive/Documents/ShapeLooker/cylinder.h \
+	C:/Users/richa/OneDrive/Documents/ShapeLooker/drawingboard.cpp \
+	C:/Users/richa/OneDrive/Documents/ShapeLooker/drawingboard.h \
+	C:/Users/richa/OneDrive/Documents/ShapeLooker/line.cpp \
+	C:/Users/richa/OneDrive/Documents/ShapeLooker/line.h \
 	C:/Users/richa/OneDrive/Documents/ShapeLooker/main.cpp \
 	C:/Users/richa/OneDrive/Documents/ShapeLooker/mainwindow.cpp \
 	C:/Users/richa/OneDrive/Documents/ShapeLooker/mainwindow.h \
+	C:/Users/richa/OneDrive/Documents/ShapeLooker/rect.cpp \
+	C:/Users/richa/OneDrive/Documents/ShapeLooker/rect.h \
 	C:/Users/richa/OneDrive/Documents/ShapeLooker/styles.qrc \
 	C:/Users/richa/OneDrive/Documents/ShapeLooker/mainwindow.ui \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe

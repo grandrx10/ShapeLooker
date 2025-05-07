@@ -4,14 +4,13 @@
 #include <QWidget>
 #include <QGraphicsItem>
 #include <QGraphicsView>
+#include "drawableItem.h"
 
-
-class Cylinder : public QGraphicsItem {
+class Cylinder : public DrawableItem {
 
 public:
-    explicit Cylinder(QGraphicsItem *parent = nullptr);
-    QRectF boundingRect() const override;
-    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
+    Cylinder();
+    void draw(QPainter * painter) override;
     void setType(QString shapeType);
     void setRadius(double radius);
     void setHeight(double height);

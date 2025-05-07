@@ -10,6 +10,7 @@
 #include <QMessageBox>
 #include <QDir>
 #include <QFileDialog>
+#include "drawingboard.h"
 
 namespace Ui {
 class MainWindow;
@@ -29,6 +30,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     Cylinder * cylinder;
+    DrawingBoard * drawingBoard;
     QList<QString> spaceDropdown;
     QList<QString> unitsDropdown;
     QList<QString> modelDropdown;

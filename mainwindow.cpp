@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include <QPointF>
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -40,8 +42,10 @@ MainWindow::MainWindow(QWidget *parent)
     // visual model
     QGraphicsScene * scene = new QGraphicsScene(this);
     ui->graphicsView->setScene(scene);
+    drawingBoard = new DrawingBoard();
     cylinder = new Cylinder();
-    scene->addItem(cylinder);
+    drawingBoard->addItem(cylinder);
+    scene->addItem(drawingBoard);
 
     // Adding the connections
     connect(ui->actionSave, &QAction::triggered, this, &MainWindow::onSaveClicked);
@@ -51,6 +55,32 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->comboSpace, &QComboBox::currentIndexChanged, this, &MainWindow::onComboSpaceChanged);
     connect(ui->leP1, &QLineEdit::textChanged, this, &MainWindow::onParam1Changed);
     connect(ui->leP2, &QLineEdit::textChanged, this, &MainWindow::onParam2Changed);
+
+    // Tool buttons
+    connect(ui->actionLineTool, &QAction::triggered, this, [this]() {
+        drawingBoard->setTool("Line");
+        ui->labelTool->setText("Tool: Line");
+    });
+    connect(ui->actionRectTool, &QAction::triggered, this, [this]() {
+        drawingBoard->setTool("Rect");
+        ui->labelTool->setText("Tool: Rectangle");
+    });
+    connect(ui->actionCornerCircleTool, &QAction::triggered, this, [this]() {
+        drawingBoard->setTool("CornerCircle");
+        ui->labelTool->setText("Tool: Corner Circle");
+    });
+    connect(ui->actionCenterCircleTool, &QAction::triggered, this, [this]() {
+        drawingBoard->setTool("CenterCircle");
+        ui->labelTool->setText("Tool: Center Circle");
+    });
+    connect(ui->actionEraserTool, &QAction::triggered, this, [this]() {
+        drawingBoard->setTool("Eraser");
+        ui->labelTool->setText("Tool: Eraser");
+    });
+    connect(ui->actionNoTool, &QAction::triggered, this, [this]() {
+        drawingBoard->setTool("None");
+        ui->labelTool->setText("Tool: None");
+    });
 
 }
 
@@ -217,3 +247,4 @@ void MainWindow::onParam2Changed(const QString &arg1)
         cylinder->setHeight(value);
     }
 }
+

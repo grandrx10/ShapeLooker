@@ -26,6 +26,11 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         cylinder.h cylinder.cpp
         mainwindow.h mainwindow.cpp mainwindow.ui
         styles.qrc
+        drawingboard.h drawingboard.cpp
+        drawableItem.h
+        line.h line.cpp
+        rect.h rect.cpp
+        circle.h circle.cpp
 
 
 
