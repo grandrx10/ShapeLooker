@@ -33,9 +33,11 @@ private:
     void loadItem(QJsonObject item);
 
 protected:
-    // void mouseMoveEvent(QGraphicsSceneMouseEvent* event) override;
+    void mouseReleaseEvent(QGraphicsSceneMouseEvent* event) override;
     void hoverMoveEvent(QGraphicsSceneHoverEvent* event) override;
+    void mouseMoveEvent(QGraphicsSceneMouseEvent* event) override;
     void mousePressEvent(QGraphicsSceneMouseEvent * event) override;
+
     void keyPressEvent(QKeyEvent *event) override;
 };
 

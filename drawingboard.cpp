@@ -40,6 +40,16 @@ QPointF DrawingBoard::getMousePosition() {
     return mousePosition;
 }
 
+void DrawingBoard::deleteItemAt(QPointF point) {
+    for (int i = items.length() - 1; i >= 0; i -- ) {
+        if (items[i]->isDeletable() && items[i]->contains(point)) {
+            delete items[i];
+            items.remove(i);
+            return;
+        }
+    }
+}
+
 void DrawingBoard::hoverMoveEvent(QGraphicsSceneHoverEvent * event) {
     mousePosition = event->pos();
 
@@ -51,14 +61,15 @@ void DrawingBoard::hoverMoveEvent(QGraphicsSceneHoverEvent * event) {
     update();
 }
 
-void DrawingBoard::deleteItemAt(QPointF point) {
-    for (int i = items.length() - 1; i >= 0; i -- ) {
-        if (items[i]->isDeletable() && items[i]->contains(point)) {
-            delete items[i];
-            items.remove(i);
-            return;
-        }
+void DrawingBoard::mouseMoveEvent(QGraphicsSceneMouseEvent* event) {
+    mousePosition = event->pos();
+
+    Pen * pen = dynamic_cast<Pen*>(currentItem);
+    if (currentItem != nullptr && pen != nullptr){
+        pen->addSplinePoint(mousePosition);
     }
+
+    update();
 }
 
 void DrawingBoard::mousePressEvent(QGraphicsSceneMouseEvent * event) {
@@ -90,12 +101,23 @@ void DrawingBoard::mousePressEvent(QGraphicsSceneMouseEvent * event) {
         addItem(currentItem);
         currentItem->setPoint1(event->pos());
     } else {
-        currentItem->setPoint2(event->pos());
-        currentItem = nullptr;
+        if (drawStyle == "Click") {
+            currentItem->setPoint2(event->pos());
+            currentItem = nullptr;
+        }
     }
 
     update();
 }
+
+
+
+void DrawingBoard::mouseReleaseEvent(QGraphicsSceneMouseEvent* event) {
+    if (drawStyle == "Drag" && currentItem != nullptr) {
+        currentItem->setPoint2(event->pos());
+        currentItem = nullptr;
+    }
+};
 
 void DrawingBoard::clearIncompleteDrawing() {
     if (currentItem != nullptr) {
