@@ -7,6 +7,7 @@ class Line : public DrawableItem
 {
 public:
     void draw(QPainter * painter) override;
+    QJsonObject save() override;
 
 private:
 

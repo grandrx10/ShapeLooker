@@ -8,9 +8,9 @@ class Circle : public DrawableItem
 public:
     void draw(QPainter * painter) override;
     void setType (QString type);
+    QJsonObject save() override;
 private:
     QString type;
-
 };
 
 #endif // LINE_H

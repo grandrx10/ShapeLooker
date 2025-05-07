@@ -100,6 +100,8 @@ void MainWindow::onSaveClicked()
     jsonData["leParam1"] = ui->leP1->text();
     jsonData["leParam2"] = ui->leP2->text();
 
+    jsonData["drawings"] = drawingBoard->saveItems();
+
     QJsonDocument saveDoc(jsonData);
     QString savePath = QFileDialog::getSaveFileName(
         this,
@@ -148,6 +150,11 @@ void MainWindow::onLoadClicked()
     QJsonObject jsonObj = loadDoc.object();
 
     // Restore combobox values
+    qInfo() << jsonObj;
+    if (jsonObj.contains("drawings")) {
+        drawingBoard->loadItems(jsonObj["drawings"].toArray());
+    }
+
     if (jsonObj.contains("comboModel"))
         ui->comboModel->setCurrentText(jsonObj["comboModel"].toString());
 
@@ -163,6 +170,7 @@ void MainWindow::onLoadClicked()
 
     if (jsonObj.contains("leParam2"))
         ui->leP2->setText(jsonObj["leParam2"].toString());
+
 
     loadFile.close();
     statusBar()->showMessage("Configuration loaded", 3000);

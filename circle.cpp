@@ -29,3 +29,14 @@ void Circle::draw(QPainter* painter) {
 void Circle::setType(QString circType) {
     type = circType;
 }
+
+QJsonObject Circle::save() {
+    QJsonObject obj = DrawableItem::save();
+    if (obj.isEmpty()) {
+        return obj;
+    }
+
+    obj["Shape"] = "Circle";
+    obj["Type"] = type;
+    return obj;
+}

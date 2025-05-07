@@ -18,6 +18,8 @@ public:
     void setTool(QString tool);
     void clearIncompleteDrawing();
     void deleteItemAt(QPointF point);
+    QJsonArray saveItems();
+    void loadItems(QJsonArray items);
 
 private:
     const qreal diagramSize = 180;
@@ -25,6 +27,8 @@ private:
     QPointF mousePosition;
     QString activeTool = "None";
     DrawableItem * currentItem = nullptr;
+
+    void loadItem(QJsonObject item);
 
 protected:
     // void mouseMoveEvent(QGraphicsSceneMouseEvent* event) override;

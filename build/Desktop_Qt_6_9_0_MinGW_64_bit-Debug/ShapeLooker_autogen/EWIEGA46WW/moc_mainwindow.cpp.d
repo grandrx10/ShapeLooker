@@ -2,6 +2,7 @@ C:/Users/richa/OneDrive/Documents/ShapeLooker/build/Desktop_Qt_6_9_0_MinGW_64_bi
   C:/Users/richa/OneDrive/Documents/ShapeLooker/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/ShapeLooker_autogen/moc_predefs.h \
   C:/Qt/6.9.0/mingw_64/include/QtCore/QDir \
   C:/Qt/6.9.0/mingw_64/include/QtCore/QFile \
+  C:/Qt/6.9.0/mingw_64/include/QtCore/QJsonArray \
   C:/Qt/6.9.0/mingw_64/include/QtCore/QJsonDocument \
   C:/Qt/6.9.0/mingw_64/include/QtCore/QJsonObject \
   C:/Qt/6.9.0/mingw_64/include/QtCore/QList \
@@ -71,6 +72,7 @@ C:/Users/richa/OneDrive/Documents/ShapeLooker/build/Desktop_Qt_6_9_0_MinGW_64_bi
   C:/Qt/6.9.0/mingw_64/include/QtCore/qiodevicebase.h \
   C:/Qt/6.9.0/mingw_64/include/QtCore/qiterable.h \
   C:/Qt/6.9.0/mingw_64/include/QtCore/qiterator.h \
+  C:/Qt/6.9.0/mingw_64/include/QtCore/qjsonarray.h \
   C:/Qt/6.9.0/mingw_64/include/QtCore/qjsondocument.h \
   C:/Qt/6.9.0/mingw_64/include/QtCore/qjsonobject.h \
   C:/Qt/6.9.0/mingw_64/include/QtCore/qjsonparseerror.h \

@@ -8,4 +8,14 @@ void Line::draw(QPainter* painter) {
     }
 }
 
+QJsonObject Line::save() {
+    QJsonObject obj = DrawableItem::save();
+    if (obj.isEmpty()) {
+        return obj;
+    }
+
+    obj["Shape"] = "Line";
+    return obj;
+}
+
 

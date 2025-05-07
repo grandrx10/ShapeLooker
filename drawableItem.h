@@ -4,6 +4,9 @@
 #include <QPainter>
 #include <QGraphicsItem>
 #include "drawingboard.h"
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QJsonArray>
 
 class DrawableItem {
 public:
@@ -45,6 +48,28 @@ public:
     bool isDeletable() {
         return deletable;
     }
+
+    virtual QJsonObject save() {
+        QJsonObject obj;
+
+        if (!initializedPoint(point1) || !initializedPoint(point2)) {
+            return obj;
+        }
+
+        QJsonArray point1Array;
+        point1Array.append(point1.x());
+        point1Array.append(point1.y());
+
+        QJsonArray point2Array;
+        point2Array.append(point2.x());
+        point2Array.append(point2.y());
+
+        obj["Point1"] = point1Array;
+        obj["Point2"] = point2Array;
+
+        return obj;
+    }
+
 private:
 
 protected:

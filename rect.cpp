@@ -11,3 +11,13 @@ void Rect::draw(QPainter* painter) {
         painter->drawRect(point1.x(), point1.y(), width, height);
     }
 }
+
+QJsonObject Rect::save() {
+    QJsonObject obj = DrawableItem::save();
+    if (obj.isEmpty()) {
+        return obj;
+    }
+
+    obj["Shape"] = "Rect";
+    return obj;
+}

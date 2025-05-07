@@ -27,6 +27,7 @@ void DrawingBoard::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QW
     for (int i = 0; i < items.length(); i ++) {
         items[i]->draw(painter);
     }
+    // qInfo() << "Drawing items:" << items.length();
 }
 
 void DrawingBoard::addItem(DrawableItem* item) {
@@ -106,5 +107,54 @@ void DrawingBoard::keyPressEvent(QKeyEvent *event) {
 void DrawingBoard::setTool(QString tool) {
     clearIncompleteDrawing();
     activeTool = tool;
+}
+
+QJsonArray DrawingBoard::saveItems() {
+    QJsonArray arr;
+    for (int i = 0; i < items.length(); i ++) {
+        QJsonObject obj = items[i]->save();
+        if (!obj.isEmpty()) {
+            arr.append(obj);
+        }
+    }
+
+    return arr;
+}
+
+void DrawingBoard::loadItem(QJsonObject obj) {
+    DrawableItem * item;
+    int point1_x = obj["Point1"][0].toInt();
+    int point1_y = obj["Point1"][1].toInt();
+    int point2_x = obj["Point2"][0].toInt();
+    int point2_y = obj["Point2"][1].toInt();
+
+    QPointF point1 = QPointF(point1_x, point1_y);
+    QPointF point2 = QPointF(point2_x, point2_y);
+    if (obj["Shape"].toString() == "Line") {
+        item = new Line();
+    } else if (obj["Shape"].toString() == "Rect") {
+        item = new Rect();
+    } else if (obj["Shape"].toString() == "Circle") {
+        item = new Circle();
+        Circle* circle = dynamic_cast<Circle*>(item);
+        circle->setType(obj["Type"].toString());
+    }
+
+    item->setPoint1(point1);
+    item->setPoint2(point2);
+    qInfo() << point1 << point2;
+
+    items.append(item);
+}
+
+void DrawingBoard::loadItems(QJsonArray arr) {
+    for (int i = items.length() - 1; i >= 1; i --) {
+        items.removeLast();
+    }
+
+    for (int i = 0; i < arr.size(); i ++) {
+        loadItem(arr[i].toObject());
+    }
+    update();
 }
 

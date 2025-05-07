@@ -6,6 +6,7 @@
 class Rect : public DrawableItem
 {
 public:
+    QJsonObject save() override;
     void draw(QPainter * painter) override;
 };
 
