@@ -3,6 +3,7 @@
 #include "line.h"
 #include "rect.h"
 #include "circle.h"
+#include "pen.h"
 #include <QKeyEvent>
 #include <QWidget>
 
@@ -27,7 +28,7 @@ void DrawingBoard::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QW
     for (int i = 0; i < items.length(); i ++) {
         items[i]->draw(painter);
     }
-    // qInfo() << "Drawing items:" << items.length();
+
 }
 
 void DrawingBoard::addItem(DrawableItem* item) {
@@ -41,13 +42,19 @@ QPointF DrawingBoard::getMousePosition() {
 
 void DrawingBoard::hoverMoveEvent(QGraphicsSceneHoverEvent * event) {
     mousePosition = event->pos();
+
+    Pen * pen = dynamic_cast<Pen*>(currentItem);
+    if (currentItem != nullptr && pen != nullptr){
+        pen->addSplinePoint(mousePosition);
+    }
+
     update();
 }
 
 void DrawingBoard::deleteItemAt(QPointF point) {
     for (int i = items.length() - 1; i >= 0; i -- ) {
         if (items[i]->isDeletable() && items[i]->contains(point)) {
-            free(items[i]);
+            delete items[i];
             items.remove(i);
             return;
         }
@@ -76,6 +83,8 @@ void DrawingBoard::mousePressEvent(QGraphicsSceneMouseEvent * event) {
         } else if (activeTool == "Eraser") {
             deleteItemAt(event->pos());
             return;
+        } else if (activeTool == "Pen") {
+            currentItem = new Pen();
         }
 
         addItem(currentItem);
@@ -91,7 +100,7 @@ void DrawingBoard::mousePressEvent(QGraphicsSceneMouseEvent * event) {
 void DrawingBoard::clearIncompleteDrawing() {
     if (currentItem != nullptr) {
         items.removeLast();
-        free(currentItem);
+        delete currentItem;
         currentItem = nullptr;
     }
 }
@@ -138,11 +147,23 @@ void DrawingBoard::loadItem(QJsonObject obj) {
         item = new Circle();
         Circle* circle = dynamic_cast<Circle*>(item);
         circle->setType(obj["Type"].toString());
+    } else if (obj["Shape"].toString() == "Pen") {
+        item = new Pen();
+        Pen * pen = dynamic_cast<Pen*>(item);
+        QJsonArray splineArray = obj["Spline"].toArray();
+        for (int i = 0; i < splineArray.size(); i ++) {
+            QJsonArray pointArray = splineArray[i].toArray();
+            if (pointArray.size() == 2) {
+                qreal x = pointArray[0].toDouble();
+                qreal y = pointArray[1].toDouble();
+                pen->addSplinePoint(QPointF(x, y));
+            }
+        }
     }
 
     item->setPoint1(point1);
     item->setPoint2(point2);
-    qInfo() << point1 << point2;
+
 
     items.append(item);
 }
@@ -156,5 +177,14 @@ void DrawingBoard::loadItems(QJsonArray arr) {
         loadItem(arr[i].toObject());
     }
     update();
+}
+
+QString DrawingBoard::swapDrawStyle() {
+    if (drawStyle == "Click") {
+        drawStyle = "Drag";
+    } else {
+        drawStyle = "Click";
+    }
+    return drawStyle;
 }
 

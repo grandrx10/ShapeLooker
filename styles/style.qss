@@ -89,6 +89,27 @@ QMenu::indicator {
 }
 
 /* ==================== */
+/* PUSH BUTTON          */
+/* ==================== */
+QPushButton {
+    background-color: rgb(72, 202, 228);
+    color: black;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: rgb(62, 182, 208);
+}
+
+QPushButton:pressed {
+    background-color: rgb(52, 162, 188);
+}
+
+
+/* ==================== */
 /* COMBO BOXES          */
 /* ==================== */
 QComboBox {

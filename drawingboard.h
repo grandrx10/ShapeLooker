@@ -20,12 +20,14 @@ public:
     void deleteItemAt(QPointF point);
     QJsonArray saveItems();
     void loadItems(QJsonArray items);
+    QString swapDrawStyle();
 
 private:
     const qreal diagramSize = 180;
     QList<DrawableItem *> items;
     QPointF mousePosition;
     QString activeTool = "None";
+    QString drawStyle = "Click";
     DrawableItem * currentItem = nullptr;
 
     void loadItem(QJsonObject item);

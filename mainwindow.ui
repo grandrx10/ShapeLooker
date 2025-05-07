@@ -14,10 +14,10 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QHBoxLayout" name="horizontalLayout">
+   <layout class="QHBoxLayout" name="horizontalLayout_4">
     <item>
-     <layout class="QGridLayout" name="gridLayout_3">
-      <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
        <layout class="QGridLayout" name="gridLayout">
         <item row="0" column="0">
          <widget class="QLabel" name="label">
@@ -139,16 +139,16 @@
         </item>
        </layout>
       </item>
-      <item row="0" column="1">
+      <item>
        <widget class="Line" name="line">
         <property name="orientation">
          <enum>Qt::Orientation::Vertical</enum>
         </property>
        </widget>
       </item>
-      <item row="0" column="2">
-       <layout class="QGridLayout" name="gridLayout_2" rowstretch="0,3,0,1">
-        <item row="0" column="0">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout" stretch="0,3,0,0,0">
+        <item>
          <widget class="QLabel" name="label_6">
           <property name="font">
            <font>
@@ -163,10 +163,10 @@
           </property>
          </widget>
         </item>
-        <item row="1" column="0">
+        <item>
          <widget class="QGraphicsView" name="graphicsView"/>
         </item>
-        <item row="2" column="0">
+        <item>
          <widget class="QLabel" name="labelTool">
           <property name="font">
            <font>
@@ -181,7 +181,44 @@
           </property>
          </widget>
         </item>
-        <item row="3" column="0">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="drawStyleButton">
+            <property name="text">
+             <string>Style: Click</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
          <spacer name="verticalSpacer">
           <property name="orientation">
            <enum>Qt::Orientation::Vertical</enum>
@@ -231,6 +268,7 @@
     <addaction name="actionLineTool"/>
     <addaction name="actionRectTool"/>
     <addaction name="menuDraw_Circle"/>
+    <addaction name="actionPenTool"/>
     <addaction name="actionEraserTool"/>
    </widget>
    <addaction name="menuFile"/>
@@ -275,6 +313,11 @@
   <action name="actionCenterCircleTool">
    <property name="text">
     <string>Center</string>
+   </property>
+  </action>
+  <action name="actionPenTool">
+   <property name="text">
+    <string>Pen</string>
    </property>
   </action>
  </widget>

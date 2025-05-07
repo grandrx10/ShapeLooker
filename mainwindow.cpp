@@ -81,6 +81,13 @@ MainWindow::MainWindow(QWidget *parent)
         drawingBoard->setTool("None");
         ui->labelTool->setText("Tool: None");
     });
+    connect(ui->actionPenTool, &QAction::triggered, this, [this]() {
+        drawingBoard->setTool("Pen");
+        ui->labelTool->setText("Tool: Pen");
+    });
+    connect(ui->drawStyleButton, &QPushButton::clicked, this, [this]() {
+        ui->drawStyleButton->setText("Style: " + drawingBoard->swapDrawStyle());
+    });
 
 }
 
@@ -150,7 +157,6 @@ void MainWindow::onLoadClicked()
     QJsonObject jsonObj = loadDoc.object();
 
     // Restore combobox values
-    qInfo() << jsonObj;
     if (jsonObj.contains("drawings")) {
         drawingBoard->loadItems(jsonObj["drawings"].toArray());
     }
