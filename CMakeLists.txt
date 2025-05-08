@@ -1,5 +1,19 @@
 cmake_minimum_required(VERSION 3.16)
 
+# set(CMAKE_TOOLCHAIN_FILE "C:/Users/richa/emsdk/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake")
+# set(CMAKE_SYSTEM_NAME WASM)
+# set(CMAKE_CROSSCOMPILING TRUE)
+# set(CMAKE_EXECUTABLE_SUFFIX ".js")
+# set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
+
+# # Qt-specific WebAssembly settings
+# if(EMSCRIPTEN)
+#     add_definitions(-DQT_NO_DEBUG)
+#     set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
+#     set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+#     set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+#     set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)
+# endif()
 project(ShapeLooker VERSION 0.1 LANGUAGES CXX)
 # Add this right after your project() declaration
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})

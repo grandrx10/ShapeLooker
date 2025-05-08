@@ -33,6 +33,7 @@ private:
     QList<DrawableItem *> items;
     QPointF mousePosition;
     QString activeTool = "None";
+    QString toolOnHold = "None";
     QString drawStyle = "Click";
     DrawableItem * currentItem = nullptr;
 
@@ -45,6 +46,7 @@ protected:
     void mouseMoveEvent(QGraphicsSceneMouseEvent* event) override;
     void mousePressEvent(QGraphicsSceneMouseEvent * event) override;
     void keyPressEvent(QKeyEvent *event) override;
+    void keyReleaseEvent(QKeyEvent *event) override;
 };
 
 #endif // DRAWINGBOARD_H

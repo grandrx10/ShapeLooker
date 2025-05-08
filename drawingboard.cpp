@@ -96,11 +96,11 @@ void DrawingBoard::mousePressEvent(QGraphicsSceneMouseEvent * event) {
             currentItem = new Line();
         } else if (activeTool == "Rect") {
             currentItem = new Rect();
-        } else if (activeTool == "CenterCircle") {
+        } else if (activeTool == "Center Circle") {
             currentItem = new Circle();
             Circle* circle = dynamic_cast<Circle*>(currentItem);
             circle->setType("Center");
-        } else if (activeTool == "CornerCircle") {
+        } else if (activeTool == "Corner Circle") {
             currentItem = new Circle();
             Circle* circle = dynamic_cast<Circle*>(currentItem);
             circle->setType("Corner");
@@ -156,7 +156,26 @@ void DrawingBoard::clearIncompleteDrawing() {
 void DrawingBoard::keyPressEvent(QKeyEvent *event) {
     if (event->key() == Qt::Key_Escape) {
         clearIncompleteDrawing();
-    } else {
+    }
+    else if (event->key() == Qt::Key_Space) {
+        toolOnHold = activeTool;
+        setTool("Pan");
+        event->accept();
+        return;  // Important to prevent further processing
+    }
+    else {
+        QGraphicsItem::keyPressEvent(event);
+    }
+}
+
+void DrawingBoard::keyReleaseEvent(QKeyEvent * event) {
+    if (event->key() == Qt::Key_Space) {
+        setTool(toolOnHold);
+        toolOnHold = "None";
+        event->accept();
+        return;
+    }
+    else {
         QGraphicsItem::keyPressEvent(event);
     }
 }
@@ -165,8 +184,12 @@ void DrawingBoard::setTool(QString tool) {
     clearIncompleteDrawing();
     activeTool = tool;
 
+    mainWindow->getUi()->labelTool->setText("Tool: " + tool);
+
     if (activeTool != "Pan") {
         mainWindow->getUi()->graphicsView->setDragMode(QGraphicsView::NoDrag);
+    } else {
+        mainWindow->getUi()->graphicsView->setDragMode(QGraphicsView::ScrollHandDrag);
     }
 }
 

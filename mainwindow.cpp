@@ -64,39 +64,30 @@ MainWindow::MainWindow(QWidget *parent)
     // Tool buttons
     connect(ui->actionLineTool, &QAction::triggered, this, [this]() {
         drawingBoard->setTool("Line");
-        ui->labelTool->setText("Tool: Line");
     });
     connect(ui->actionRectTool, &QAction::triggered, this, [this]() {
         drawingBoard->setTool("Rect");
-        ui->labelTool->setText("Tool: Rectangle");
     });
     connect(ui->actionCornerCircleTool, &QAction::triggered, this, [this]() {
-        drawingBoard->setTool("CornerCircle");
-        ui->labelTool->setText("Tool: Corner Circle");
+        drawingBoard->setTool("Corner Circle");
     });
     connect(ui->actionCenterCircleTool, &QAction::triggered, this, [this]() {
-        drawingBoard->setTool("CenterCircle");
-        ui->labelTool->setText("Tool: Center Circle");
+        drawingBoard->setTool("Center Circle");
     });
     connect(ui->actionEraserTool, &QAction::triggered, this, [this]() {
         drawingBoard->setTool("Eraser");
-        ui->labelTool->setText("Tool: Eraser");
     });
     connect(ui->actionNoTool, &QAction::triggered, this, [this]() {
         drawingBoard->setTool("None");
-        ui->labelTool->setText("Tool: None");
     });
     connect(ui->actionPenTool, &QAction::triggered, this, [this]() {
         drawingBoard->setTool("Pen");
-        ui->labelTool->setText("Tool: Pen");
     });
     connect(ui->drawStyleButton, &QPushButton::clicked, this, [this]() {
         ui->drawStyleButton->setText("Style: " + drawingBoard->swapDrawStyle());
     });
     connect(ui->actionPanTool, &QAction::triggered, this, [this](){
-        ui->labelTool->setText("Tool: Pan");
         drawingBoard->setTool("Pan");
-        ui->graphicsView->setDragMode(QGraphicsView::ScrollHandDrag);
     });
 
 }
