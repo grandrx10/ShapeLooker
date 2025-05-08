@@ -24,10 +24,12 @@ public:
     QJsonArray saveItems();
     void loadItems(QJsonArray items);
     QString swapDrawStyle();
+    double getSelectThreshold();
 
 private:
     MainWindow * mainWindow;
     int diagramSize = 180;
+    double selectThreshold = 10;
     QList<DrawableItem *> items;
     QPointF mousePosition;
     QString activeTool = "None";

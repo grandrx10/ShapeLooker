@@ -9,6 +9,7 @@ public:
     void draw(QPainter * painter) override;
     void setType (QString type);
     QJsonObject save() override;
+    bool contains(QPointF point) override;
 private:
     QString type;
 };

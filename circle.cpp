@@ -26,6 +26,27 @@ void Circle::draw(QPainter* painter) {
     }
 }
 
+bool Circle::contains(QPointF point) {
+    if (type == "Center") {
+        return QLineF(point1, point).length() <= QLineF(point1, point2).length();
+    } else {
+        // simply plug in the ellipse equation!
+        QPointF center = (point1 + point2) / 2;
+        double width = qAbs(point2.x() - point1.x());
+        double height = qAbs(point2.y() - point1.y());
+
+        double a = width / 2.0;
+        double b = height / 2.0;
+
+        // transform so that the elliptical center is the center of the
+        // coord system.
+        double x = point.x() - center.x();
+        double y = point.y() - center.y();
+
+        return (x*x)/(a*a) + (y*y)/(b*b) <= 1.0;
+    }
+}
+
 void Circle::setType(QString circType) {
     type = circType;
 }

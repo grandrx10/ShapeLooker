@@ -31,7 +31,20 @@ public:
         }
         return true;
     }
-    bool contains(QPointF point) {
+    \
+    bool invalidStructure() {
+        if (!initializedPoint(point1) || !initializedPoint(point2)) {
+            return false;
+        }
+
+        if (point1 == point2) {
+            return true;
+        }
+        return false;
+    }
+
+    // base hitbox detection
+    virtual bool contains(QPointF point) {
         if (!initializedPoint(point1) || !initializedPoint(point2)) {
             return false;
         }

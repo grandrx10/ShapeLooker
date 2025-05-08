@@ -8,6 +8,7 @@ class Line : public DrawableItem
 public:
     void draw(QPainter * painter) override;
     QJsonObject save() override;
+    bool contains(QPointF point) override;
 
 private:
 

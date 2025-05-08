@@ -116,6 +116,11 @@ void DrawingBoard::mousePressEvent(QGraphicsSceneMouseEvent * event) {
     } else {
         if (drawStyle == "Click") {
             currentItem->setPoint2(event->pos());
+
+            if (currentItem->invalidStructure()) {
+                clearIncompleteDrawing();
+            }
+
             currentItem = nullptr;
         }
     }
@@ -133,6 +138,9 @@ void DrawingBoard::mouseReleaseEvent(QGraphicsSceneMouseEvent* event) {
 
     if (drawStyle == "Drag" && currentItem != nullptr) {
         currentItem->setPoint2(event->pos());
+        if (currentItem->invalidStructure()) {
+            clearIncompleteDrawing();
+        }
         currentItem = nullptr;
     }
 };
@@ -230,5 +238,9 @@ QString DrawingBoard::swapDrawStyle() {
         drawStyle = "Click";
     }
     return drawStyle;
+}
+
+double DrawingBoard::getSelectThreshold() {
+    return selectThreshold;
 }
 
