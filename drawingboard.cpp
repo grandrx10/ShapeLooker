@@ -6,11 +6,15 @@
 #include "pen.h"
 #include <QKeyEvent>
 #include <QWidget>
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
 
-
-DrawingBoard::DrawingBoard(QGraphicsItem *parent)
+DrawingBoard::DrawingBoard(QGraphicsItem *parent, MainWindow* mainWindow)
     : QGraphicsItem(parent)
 {
+    this->mainWindow = mainWindow;
+    diagramSize = mainWindow->getSceneWidth();
+
     setAcceptHoverEvents(true);
     setFlag(QGraphicsItem::ItemIsFocusable);
     setFocus();
@@ -51,6 +55,10 @@ void DrawingBoard::deleteItemAt(QPointF point) {
 }
 
 void DrawingBoard::hoverMoveEvent(QGraphicsSceneHoverEvent * event) {
+    if (activeTool == "None" || activeTool == "Pan") {
+        QGraphicsItem::hoverMoveEvent(event);
+        return;
+    }
     mousePosition = event->pos();
 
     Pen * pen = dynamic_cast<Pen*>(currentItem);
@@ -62,6 +70,10 @@ void DrawingBoard::hoverMoveEvent(QGraphicsSceneHoverEvent * event) {
 }
 
 void DrawingBoard::mouseMoveEvent(QGraphicsSceneMouseEvent* event) {
+    if (activeTool == "None" || activeTool == "Pan") {
+        QGraphicsItem::mouseMoveEvent(event);
+        return;
+    }
     mousePosition = event->pos();
 
     Pen * pen = dynamic_cast<Pen*>(currentItem);
@@ -73,7 +85,8 @@ void DrawingBoard::mouseMoveEvent(QGraphicsSceneMouseEvent* event) {
 }
 
 void DrawingBoard::mousePressEvent(QGraphicsSceneMouseEvent * event) {
-    if (activeTool == "None") {
+    if (activeTool == "None" || activeTool == "Pan") {
+        QGraphicsItem::mousePressEvent(event);
         return;
     }
 
@@ -113,6 +126,11 @@ void DrawingBoard::mousePressEvent(QGraphicsSceneMouseEvent * event) {
 
 
 void DrawingBoard::mouseReleaseEvent(QGraphicsSceneMouseEvent* event) {
+    if (activeTool == "None" || activeTool == "Pan") {
+        QGraphicsItem::mouseReleaseEvent(event);
+        return;
+    }
+
     if (drawStyle == "Drag" && currentItem != nullptr) {
         currentItem->setPoint2(event->pos());
         currentItem = nullptr;
@@ -138,6 +156,10 @@ void DrawingBoard::keyPressEvent(QKeyEvent *event) {
 void DrawingBoard::setTool(QString tool) {
     clearIncompleteDrawing();
     activeTool = tool;
+
+    if (activeTool != "Pan") {
+        mainWindow->getUi()->graphicsView->setDragMode(QGraphicsView::NoDrag);
+    }
 }
 
 QJsonArray DrawingBoard::saveItems() {

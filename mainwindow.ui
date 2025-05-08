@@ -164,7 +164,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QGraphicsView" name="graphicsView"/>
+         <widget class="ShapeLookerGraphicsView" name="graphicsView"/>
         </item>
         <item>
          <widget class="QLabel" name="labelTool">
@@ -270,6 +270,7 @@
     <addaction name="menuDraw_Circle"/>
     <addaction name="actionPenTool"/>
     <addaction name="actionEraserTool"/>
+    <addaction name="actionPanTool"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuTools"/>
@@ -320,7 +321,19 @@
     <string>Pen</string>
    </property>
   </action>
+  <action name="actionPanTool">
+   <property name="text">
+    <string>Pan</string>
+   </property>
+  </action>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ShapeLookerGraphicsView</class>
+   <extends>QGraphicsView</extends>
+   <header>shapelookergraphicsview.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

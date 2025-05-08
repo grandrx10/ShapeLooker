@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.16)
 
 project(ShapeLooker VERSION 0.1 LANGUAGES CXX)
-
+# Add this right after your project() declaration
+include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
@@ -14,10 +15,8 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 set(PROJECT_SOURCES
         main.cpp
-
-
-
 )
+
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(ShapeLooker
@@ -32,6 +31,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         rect.h rect.cpp
         circle.h circle.cpp
         pen.h pen.cpp
+        shapelookergraphicsview.h shapelookergraphicsview.cpp
 
 
 

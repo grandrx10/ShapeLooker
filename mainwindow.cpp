@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 
 #include <QPointF>
+#include <QDoubleValidator>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -41,8 +42,9 @@ MainWindow::MainWindow(QWidget *parent)
 
     // visual model
     QGraphicsScene * scene = new QGraphicsScene(this);
+    scene->setSceneRect(-sceneWidth / 2, -sceneHeight / 2, sceneWidth, sceneHeight);
     ui->graphicsView->setScene(scene);
-    drawingBoard = new DrawingBoard();
+    drawingBoard = new DrawingBoard(nullptr, this);
     cylinder = new Cylinder();
     drawingBoard->addItem(cylinder);
     scene->addItem(drawingBoard);
@@ -56,6 +58,9 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->leP1, &QLineEdit::textChanged, this, &MainWindow::onParam1Changed);
     connect(ui->leP2, &QLineEdit::textChanged, this, &MainWindow::onParam2Changed);
 
+    // Adding validators
+    ui->leP1->setValidator(new QDoubleValidator(0.000001, 1e9, 6, this));
+    ui->leP2->setValidator(new QDoubleValidator(0.000001, 1e9, 6, this));
     // Tool buttons
     connect(ui->actionLineTool, &QAction::triggered, this, [this]() {
         drawingBoard->setTool("Line");
@@ -88,12 +93,25 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->drawStyleButton, &QPushButton::clicked, this, [this]() {
         ui->drawStyleButton->setText("Style: " + drawingBoard->swapDrawStyle());
     });
+    connect(ui->actionPanTool, &QAction::triggered, this, [this](){
+        ui->labelTool->setText("Tool: Pan");
+        drawingBoard->setTool("Pan");
+        ui->graphicsView->setDragMode(QGraphicsView::ScrollHandDrag);
+    });
 
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+Ui::MainWindow* MainWindow::getUi() {
+    return ui;
+}
+
+int MainWindow::getSceneWidth(){
+    return sceneWidth;
 }
 
 void MainWindow::onSaveClicked()
@@ -224,10 +242,6 @@ double verifyDouble(QString arg) {
     double val = arg.toDouble(&isNumber);
 
     if (!isNumber) {
-        return -1;
-    }
-
-    if (val <= 0) {
         return -1;
     }
 

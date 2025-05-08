@@ -26,6 +26,8 @@ private:
     qreal m_scale = 1.0;
     const qreal diagramSize = 180;
     QString type = QString("U");
+
+    int findUniversalMultiplier();
 };
 
 #endif // CYLINDER_H

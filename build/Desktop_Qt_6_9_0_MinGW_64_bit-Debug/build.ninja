@@ -53,7 +53,7 @@ build CMakeFiles/ShapeLooker.dir/ShapeLooker_autogen/mocs_compilation.cpp.obj: C
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\ShapeLooker.dir\ShapeLooker_autogen\mocs_compilation.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/richa/OneDrive/Documents/ShapeLooker/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/ShapeLooker_autogen/include -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.0/mingw_64/include/QtGui
+  INCLUDES = -IC:/Users/richa/OneDrive/Documents/ShapeLooker/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/ShapeLooker_autogen/include -IC:/Users/richa/OneDrive/Documents/ShapeLooker -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.0/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\ShapeLooker.dir
   OBJECT_FILE_DIR = CMakeFiles\ShapeLooker.dir\ShapeLooker_autogen
 
@@ -61,7 +61,7 @@ build CMakeFiles/ShapeLooker.dir/main.cpp.obj: CXX_COMPILER__ShapeLooker_unscann
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\ShapeLooker.dir\main.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/richa/OneDrive/Documents/ShapeLooker/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/ShapeLooker_autogen/include -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.0/mingw_64/include/QtGui
+  INCLUDES = -IC:/Users/richa/OneDrive/Documents/ShapeLooker/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/ShapeLooker_autogen/include -IC:/Users/richa/OneDrive/Documents/ShapeLooker -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.0/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\ShapeLooker.dir
   OBJECT_FILE_DIR = CMakeFiles\ShapeLooker.dir
 
@@ -69,7 +69,7 @@ build CMakeFiles/ShapeLooker.dir/cylinder.cpp.obj: CXX_COMPILER__ShapeLooker_uns
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\ShapeLooker.dir\cylinder.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/richa/OneDrive/Documents/ShapeLooker/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/ShapeLooker_autogen/include -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.0/mingw_64/include/QtGui
+  INCLUDES = -IC:/Users/richa/OneDrive/Documents/ShapeLooker/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/ShapeLooker_autogen/include -IC:/Users/richa/OneDrive/Documents/ShapeLooker -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.0/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\ShapeLooker.dir
   OBJECT_FILE_DIR = CMakeFiles\ShapeLooker.dir
 
@@ -77,7 +77,7 @@ build CMakeFiles/ShapeLooker.dir/mainwindow.cpp.obj: CXX_COMPILER__ShapeLooker_u
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\ShapeLooker.dir\mainwindow.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/richa/OneDrive/Documents/ShapeLooker/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/ShapeLooker_autogen/include -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.0/mingw_64/include/QtGui
+  INCLUDES = -IC:/Users/richa/OneDrive/Documents/ShapeLooker/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/ShapeLooker_autogen/include -IC:/Users/richa/OneDrive/Documents/ShapeLooker -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.0/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\ShapeLooker.dir
   OBJECT_FILE_DIR = CMakeFiles\ShapeLooker.dir
 
@@ -85,7 +85,7 @@ build CMakeFiles/ShapeLooker.dir/drawingboard.cpp.obj: CXX_COMPILER__ShapeLooker
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\ShapeLooker.dir\drawingboard.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/richa/OneDrive/Documents/ShapeLooker/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/ShapeLooker_autogen/include -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.0/mingw_64/include/QtGui
+  INCLUDES = -IC:/Users/richa/OneDrive/Documents/ShapeLooker/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/ShapeLooker_autogen/include -IC:/Users/richa/OneDrive/Documents/ShapeLooker -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.0/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\ShapeLooker.dir
   OBJECT_FILE_DIR = CMakeFiles\ShapeLooker.dir
 
@@ -93,7 +93,7 @@ build CMakeFiles/ShapeLooker.dir/line.cpp.obj: CXX_COMPILER__ShapeLooker_unscann
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\ShapeLooker.dir\line.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/richa/OneDrive/Documents/ShapeLooker/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/ShapeLooker_autogen/include -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.0/mingw_64/include/QtGui
+  INCLUDES = -IC:/Users/richa/OneDrive/Documents/ShapeLooker/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/ShapeLooker_autogen/include -IC:/Users/richa/OneDrive/Documents/ShapeLooker -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.0/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\ShapeLooker.dir
   OBJECT_FILE_DIR = CMakeFiles\ShapeLooker.dir
 
@@ -101,7 +101,7 @@ build CMakeFiles/ShapeLooker.dir/rect.cpp.obj: CXX_COMPILER__ShapeLooker_unscann
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\ShapeLooker.dir\rect.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/richa/OneDrive/Documents/ShapeLooker/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/ShapeLooker_autogen/include -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.0/mingw_64/include/QtGui
+  INCLUDES = -IC:/Users/richa/OneDrive/Documents/ShapeLooker/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/ShapeLooker_autogen/include -IC:/Users/richa/OneDrive/Documents/ShapeLooker -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.0/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\ShapeLooker.dir
   OBJECT_FILE_DIR = CMakeFiles\ShapeLooker.dir
 
@@ -109,7 +109,7 @@ build CMakeFiles/ShapeLooker.dir/circle.cpp.obj: CXX_COMPILER__ShapeLooker_unsca
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\ShapeLooker.dir\circle.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/richa/OneDrive/Documents/ShapeLooker/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/ShapeLooker_autogen/include -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.0/mingw_64/include/QtGui
+  INCLUDES = -IC:/Users/richa/OneDrive/Documents/ShapeLooker/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/ShapeLooker_autogen/include -IC:/Users/richa/OneDrive/Documents/ShapeLooker -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.0/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\ShapeLooker.dir
   OBJECT_FILE_DIR = CMakeFiles\ShapeLooker.dir
 
@@ -117,7 +117,15 @@ build CMakeFiles/ShapeLooker.dir/pen.cpp.obj: CXX_COMPILER__ShapeLooker_unscanne
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\ShapeLooker.dir\pen.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/richa/OneDrive/Documents/ShapeLooker/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/ShapeLooker_autogen/include -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.0/mingw_64/include/QtGui
+  INCLUDES = -IC:/Users/richa/OneDrive/Documents/ShapeLooker/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/ShapeLooker_autogen/include -IC:/Users/richa/OneDrive/Documents/ShapeLooker -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.0/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\ShapeLooker.dir
+  OBJECT_FILE_DIR = CMakeFiles\ShapeLooker.dir
+
+build CMakeFiles/ShapeLooker.dir/shapelookergraphicsview.cpp.obj: CXX_COMPILER__ShapeLooker_unscanned_Debug C$:/Users/richa/OneDrive/Documents/ShapeLooker/shapelookergraphicsview.cpp || cmake_object_order_depends_target_ShapeLooker
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\ShapeLooker.dir\shapelookergraphicsview.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/richa/OneDrive/Documents/ShapeLooker/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/ShapeLooker_autogen/include -IC:/Users/richa/OneDrive/Documents/ShapeLooker -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.0/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\ShapeLooker.dir
   OBJECT_FILE_DIR = CMakeFiles\ShapeLooker.dir
 
@@ -125,7 +133,7 @@ build CMakeFiles/ShapeLooker.dir/ShapeLooker_autogen/EWIEGA46WW/qrc_styles.cpp.o
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\ShapeLooker.dir\ShapeLooker_autogen\EWIEGA46WW\qrc_styles.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/richa/OneDrive/Documents/ShapeLooker/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/ShapeLooker_autogen/include -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.0/mingw_64/include/QtGui
+  INCLUDES = -IC:/Users/richa/OneDrive/Documents/ShapeLooker/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/ShapeLooker_autogen/include -IC:/Users/richa/OneDrive/Documents/ShapeLooker -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.0/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\ShapeLooker.dir
   OBJECT_FILE_DIR = CMakeFiles\ShapeLooker.dir\ShapeLooker_autogen\EWIEGA46WW
 
@@ -137,7 +145,7 @@ build CMakeFiles/ShapeLooker.dir/ShapeLooker_autogen/EWIEGA46WW/qrc_styles.cpp.o
 #############################################
 # Link the executable ShapeLooker.exe
 
-build ShapeLooker.exe: CXX_EXECUTABLE_LINKER__ShapeLooker_Debug CMakeFiles/ShapeLooker.dir/ShapeLooker_autogen/mocs_compilation.cpp.obj CMakeFiles/ShapeLooker.dir/main.cpp.obj CMakeFiles/ShapeLooker.dir/cylinder.cpp.obj CMakeFiles/ShapeLooker.dir/mainwindow.cpp.obj CMakeFiles/ShapeLooker.dir/drawingboard.cpp.obj CMakeFiles/ShapeLooker.dir/line.cpp.obj CMakeFiles/ShapeLooker.dir/rect.cpp.obj CMakeFiles/ShapeLooker.dir/circle.cpp.obj CMakeFiles/ShapeLooker.dir/pen.cpp.obj CMakeFiles/ShapeLooker.dir/ShapeLooker_autogen/EWIEGA46WW/qrc_styles.cpp.obj | C$:/Qt/6.9.0/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.9.0/mingw_64/lib/libQt6Gui.a C$:/Qt/6.9.0/mingw_64/lib/libQt6Core.a C$:/Qt/6.9.0/mingw_64/lib/libQt6EntryPoint.a || ShapeLooker_autogen ShapeLooker_autogen_timestamp_deps
+build ShapeLooker.exe: CXX_EXECUTABLE_LINKER__ShapeLooker_Debug CMakeFiles/ShapeLooker.dir/ShapeLooker_autogen/mocs_compilation.cpp.obj CMakeFiles/ShapeLooker.dir/main.cpp.obj CMakeFiles/ShapeLooker.dir/cylinder.cpp.obj CMakeFiles/ShapeLooker.dir/mainwindow.cpp.obj CMakeFiles/ShapeLooker.dir/drawingboard.cpp.obj CMakeFiles/ShapeLooker.dir/line.cpp.obj CMakeFiles/ShapeLooker.dir/rect.cpp.obj CMakeFiles/ShapeLooker.dir/circle.cpp.obj CMakeFiles/ShapeLooker.dir/pen.cpp.obj CMakeFiles/ShapeLooker.dir/shapelookergraphicsview.cpp.obj CMakeFiles/ShapeLooker.dir/ShapeLooker_autogen/EWIEGA46WW/qrc_styles.cpp.obj | C$:/Qt/6.9.0/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.9.0/mingw_64/lib/libQt6Gui.a C$:/Qt/6.9.0/mingw_64/lib/libQt6Core.a C$:/Qt/6.9.0/mingw_64/lib/libQt6EntryPoint.a || ShapeLooker_autogen ShapeLooker_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = C:/Qt/6.9.0/mingw_64/lib/libQt6Widgets.a  C:/Qt/6.9.0/mingw_64/lib/libQt6Gui.a  C:/Qt/6.9.0/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  C:/Qt/6.9.0/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32

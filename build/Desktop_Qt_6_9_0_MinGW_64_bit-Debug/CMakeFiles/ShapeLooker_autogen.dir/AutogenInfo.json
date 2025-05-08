@@ -379,6 +379,12 @@
 			"MU",
 			"EWIEGA46WW/moc_rect.cpp",
 			null
+		],
+		[
+			"C:/Users/richa/OneDrive/Documents/ShapeLooker/shapelookergraphicsview.h",
+			"MU",
+			"EWIEGA46WW/moc_shapelookergraphicsview.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -407,6 +413,7 @@
 	],
 	"MOC_INCLUDES" : 
 	[
+		"C:/Users/richa/OneDrive/Documents/ShapeLooker",
 		"C:/Qt/6.9.0/mingw_64/include/QtCore",
 		"C:/Qt/6.9.0/mingw_64/include",
 		"C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++",
@@ -475,7 +482,12 @@
 			null
 		],
 		[ "C:/Users/richa/OneDrive/Documents/ShapeLooker/pen.cpp", "MU", null ],
-		[ "C:/Users/richa/OneDrive/Documents/ShapeLooker/rect.cpp", "MU", null ]
+		[ "C:/Users/richa/OneDrive/Documents/ShapeLooker/rect.cpp", "MU", null ],
+		[
+			"C:/Users/richa/OneDrive/Documents/ShapeLooker/shapelookergraphicsview.cpp",
+			"MU",
+			null
+		]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

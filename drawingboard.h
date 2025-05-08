@@ -4,13 +4,16 @@
 #include <QGraphicsItem>
 #include <QList>
 #include <QGraphicsSceneMouseEvent>
+#include <QMainWindow>
+
+class MainWindow;
 
 class DrawableItem;
 
 class DrawingBoard : public QGraphicsItem
 {
 public:
-    explicit DrawingBoard(QGraphicsItem *parent = nullptr);
+    explicit DrawingBoard(QGraphicsItem *parent = nullptr, MainWindow* mainWindow = nullptr);
     QRectF boundingRect() const override;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
     void addItem(DrawableItem * item);
@@ -23,7 +26,8 @@ public:
     QString swapDrawStyle();
 
 private:
-    const qreal diagramSize = 180;
+    MainWindow * mainWindow;
+    int diagramSize = 180;
     QList<DrawableItem *> items;
     QPointF mousePosition;
     QString activeTool = "None";
@@ -32,12 +36,12 @@ private:
 
     void loadItem(QJsonObject item);
 
+
 protected:
     void mouseReleaseEvent(QGraphicsSceneMouseEvent* event) override;
     void hoverMoveEvent(QGraphicsSceneHoverEvent* event) override;
     void mouseMoveEvent(QGraphicsSceneMouseEvent* event) override;
     void mousePressEvent(QGraphicsSceneMouseEvent * event) override;
-
     void keyPressEvent(QKeyEvent *event) override;
 };
 

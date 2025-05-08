@@ -23,12 +23,15 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
-private slots:
+    Ui::MainWindow * getUi();
+    int getSceneWidth();
 
 
 private:
     Ui::MainWindow *ui;
+    int sceneWidth = 2000;
+    int sceneHeight = 2000;
+
     Cylinder * cylinder;
     DrawingBoard * drawingBoard;
     QList<QString> spaceDropdown;

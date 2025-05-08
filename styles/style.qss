@@ -97,7 +97,6 @@ QPushButton {
     border: none;
     padding: 8px 16px;
     border-radius: 6px;
-    font-weight: bold;
 }
 
 QPushButton:hover {

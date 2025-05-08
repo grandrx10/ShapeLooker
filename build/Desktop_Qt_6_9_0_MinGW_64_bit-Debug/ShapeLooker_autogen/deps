@@ -679,6 +679,8 @@ ShapeLooker_autogen/timestamp: \
 	C:/Users/richa/OneDrive/Documents/ShapeLooker/pen.h \
 	C:/Users/richa/OneDrive/Documents/ShapeLooker/rect.cpp \
 	C:/Users/richa/OneDrive/Documents/ShapeLooker/rect.h \
+	C:/Users/richa/OneDrive/Documents/ShapeLooker/shapelookergraphicsview.cpp \
+	C:/Users/richa/OneDrive/Documents/ShapeLooker/shapelookergraphicsview.h \
 	C:/Users/richa/OneDrive/Documents/ShapeLooker/styles.qrc \
 	C:/Users/richa/OneDrive/Documents/ShapeLooker/mainwindow.ui \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe
