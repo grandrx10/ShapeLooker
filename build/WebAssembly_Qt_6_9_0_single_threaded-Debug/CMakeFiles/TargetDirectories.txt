@@ -1,2 +1,9 @@
+C:/Users/richa/OneDrive/Documents/ShapeLooker/build/WebAssembly_Qt_6_9_0_single_threaded-Debug/CMakeFiles/ShapeLooker.dir
 C:/Users/richa/OneDrive/Documents/ShapeLooker/build/WebAssembly_Qt_6_9_0_single_threaded-Debug/CMakeFiles/edit_cache.dir
 C:/Users/richa/OneDrive/Documents/ShapeLooker/build/WebAssembly_Qt_6_9_0_single_threaded-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/richa/OneDrive/Documents/ShapeLooker/build/WebAssembly_Qt_6_9_0_single_threaded-Debug/CMakeFiles/list_install_components.dir
+C:/Users/richa/OneDrive/Documents/ShapeLooker/build/WebAssembly_Qt_6_9_0_single_threaded-Debug/CMakeFiles/install.dir
+C:/Users/richa/OneDrive/Documents/ShapeLooker/build/WebAssembly_Qt_6_9_0_single_threaded-Debug/CMakeFiles/install/local.dir
+C:/Users/richa/OneDrive/Documents/ShapeLooker/build/WebAssembly_Qt_6_9_0_single_threaded-Debug/CMakeFiles/install/strip.dir
+C:/Users/richa/OneDrive/Documents/ShapeLooker/build/WebAssembly_Qt_6_9_0_single_threaded-Debug/CMakeFiles/ShapeLooker_autogen_timestamp_deps.dir
+C:/Users/richa/OneDrive/Documents/ShapeLooker/build/WebAssembly_Qt_6_9_0_single_threaded-Debug/CMakeFiles/ShapeLooker_autogen.dir

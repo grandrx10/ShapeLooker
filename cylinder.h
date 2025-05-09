@@ -4,7 +4,7 @@
 #include <QWidget>
 #include <QGraphicsItem>
 #include <QGraphicsView>
-#include "drawableItem.h"
+#include "DrawableItem.h"
 
 class Cylinder : public DrawableItem {
 

@@ -1,0 +1,184 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake:200 (message)"
+      - "CMakeLists.txt:17 (project)"
+    message: |
+      The target system is: Emscripten - 1 - x86
+      The host system is: Windows - 10.0.22631 - AMD64
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/FindWrapAtomic.cmake:36 (check_cxx_source_compiles)"
+      - "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:38 (_qt_internal_find_third_party_dependencies)"
+      - "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:45 (include)"
+      - "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:137 (find_dependency)"
+      - "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:45 (_qt_internal_find_qt_dependencies)"
+      - "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:43 (include)"
+      - "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/Qt6Config.cmake:212 (find_package)"
+      - "CMakeLists.txt:28 (find_package)"
+    checks:
+      - "Performing Test HAVE_STDATOMIC"
+    directories:
+      source: "C:/Users/richa/OneDrive/Documents/ShapeLooker/build/WebAssembly_Qt_6_9_0_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-4a76t2"
+      binary: "C:/Users/richa/OneDrive/Documents/ShapeLooker/build/WebAssembly_Qt_6_9_0_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-4a76t2"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/platforms;C:/Users/richa/emsdk/upstream/emscripten/cmake/Modules;C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6;C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/kwin;C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6;C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/kwin"
+      QT_ADDITIONAL_PACKAGES_PREFIX_PATH: ""
+      QT_CHAINLOAD_TOOLCHAIN_FILE: ""
+      QT_TOOLCHAIN_INCLUDE_FILE: ""
+      QT_TOOLCHAIN_RELOCATABLE_CMAKE_DIR: "C:/Qt/6.9.0/wasm_singlethread/lib/cmake"
+      QT_TOOLCHAIN_RELOCATABLE_PREFIX: ""
+    buildResult:
+      variable: "HAVE_STDATOMIC"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/richa/OneDrive/Documents/ShapeLooker/build/WebAssembly_Qt_6_9_0_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-4a76t2'
+        
+        Run Build Command(s): C:/Qt/Tools/Ninja/ninja.exe -v cmTC_f2ff2
+        [1/2] C:\\Users\\richa\\emsdk\\upstream\\emscripten\\em++.bat -DHAVE_STDATOMIC  -DQT_QML_DEBUG  -std=gnu++17 -MD -MT CMakeFiles/cmTC_f2ff2.dir/src.cxx.o -MF CMakeFiles\\cmTC_f2ff2.dir\\src.cxx.o.d -o CMakeFiles/cmTC_f2ff2.dir/src.cxx.o -c C:/Users/richa/OneDrive/Documents/ShapeLooker/build/WebAssembly_Qt_6_9_0_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-4a76t2/src.cxx
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\richa\\emsdk\\upstream\\emscripten\\em++.bat -DQT_QML_DEBUG  CMakeFiles/cmTC_f2ff2.dir/src.cxx.o -o cmTC_f2ff2.js   && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/FindWrapRt.cmake:23 (check_cxx_source_compiles)"
+      - "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:38 (_qt_internal_find_third_party_dependencies)"
+      - "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:45 (include)"
+      - "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:137 (find_dependency)"
+      - "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:45 (_qt_internal_find_qt_dependencies)"
+      - "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:43 (include)"
+      - "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/Qt6Config.cmake:212 (find_package)"
+      - "CMakeLists.txt:28 (find_package)"
+    checks:
+      - "Performing Test HAVE_GETTIME"
+    directories:
+      source: "C:/Users/richa/OneDrive/Documents/ShapeLooker/build/WebAssembly_Qt_6_9_0_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-v7yo1t"
+      binary: "C:/Users/richa/OneDrive/Documents/ShapeLooker/build/WebAssembly_Qt_6_9_0_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-v7yo1t"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/platforms;C:/Users/richa/emsdk/upstream/emscripten/cmake/Modules;C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6;C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/kwin;C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6;C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/kwin"
+      QT_ADDITIONAL_PACKAGES_PREFIX_PATH: ""
+      QT_CHAINLOAD_TOOLCHAIN_FILE: ""
+      QT_TOOLCHAIN_INCLUDE_FILE: ""
+      QT_TOOLCHAIN_RELOCATABLE_CMAKE_DIR: "C:/Qt/6.9.0/wasm_singlethread/lib/cmake"
+      QT_TOOLCHAIN_RELOCATABLE_PREFIX: ""
+    buildResult:
+      variable: "HAVE_GETTIME"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/richa/OneDrive/Documents/ShapeLooker/build/WebAssembly_Qt_6_9_0_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-v7yo1t'
+        
+        Run Build Command(s): C:/Qt/Tools/Ninja/ninja.exe -v cmTC_622ae
+        [1/2] C:\\Users\\richa\\emsdk\\upstream\\emscripten\\em++.bat -DHAVE_GETTIME  -DQT_QML_DEBUG  -std=gnu++17 -MD -MT CMakeFiles/cmTC_622ae.dir/src.cxx.o -MF CMakeFiles\\cmTC_622ae.dir\\src.cxx.o.d -o CMakeFiles/cmTC_622ae.dir/src.cxx.o -c C:/Users/richa/OneDrive/Documents/ShapeLooker/build/WebAssembly_Qt_6_9_0_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-v7yo1t/src.cxx
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\richa\\emsdk\\upstream\\emscripten\\em++.bat -DQT_QML_DEBUG  CMakeFiles/cmTC_622ae.dir/src.cxx.o -o cmTC_622ae.js   && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/FindWrapRt.cmake:34 (check_cxx_source_compiles)"
+      - "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:38 (_qt_internal_find_third_party_dependencies)"
+      - "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:45 (include)"
+      - "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:137 (find_dependency)"
+      - "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:45 (_qt_internal_find_qt_dependencies)"
+      - "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:43 (include)"
+      - "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/Qt6Config.cmake:212 (find_package)"
+      - "CMakeLists.txt:28 (find_package)"
+    checks:
+      - "Performing Test HAVE_SHM_OPEN_SHM_UNLINK"
+    directories:
+      source: "C:/Users/richa/OneDrive/Documents/ShapeLooker/build/WebAssembly_Qt_6_9_0_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-xecndr"
+      binary: "C:/Users/richa/OneDrive/Documents/ShapeLooker/build/WebAssembly_Qt_6_9_0_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-xecndr"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/platforms;C:/Users/richa/emsdk/upstream/emscripten/cmake/Modules;C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6;C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/kwin;C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6;C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/kwin"
+      QT_ADDITIONAL_PACKAGES_PREFIX_PATH: ""
+      QT_CHAINLOAD_TOOLCHAIN_FILE: ""
+      QT_TOOLCHAIN_INCLUDE_FILE: ""
+      QT_TOOLCHAIN_RELOCATABLE_CMAKE_DIR: "C:/Qt/6.9.0/wasm_singlethread/lib/cmake"
+      QT_TOOLCHAIN_RELOCATABLE_PREFIX: ""
+    buildResult:
+      variable: "HAVE_SHM_OPEN_SHM_UNLINK"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/richa/OneDrive/Documents/ShapeLooker/build/WebAssembly_Qt_6_9_0_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-xecndr'
+        
+        Run Build Command(s): C:/Qt/Tools/Ninja/ninja.exe -v cmTC_1cc42
+        [1/2] C:\\Users\\richa\\emsdk\\upstream\\emscripten\\em++.bat -DHAVE_SHM_OPEN_SHM_UNLINK  -DQT_QML_DEBUG  -std=gnu++17 -MD -MT CMakeFiles/cmTC_1cc42.dir/src.cxx.o -MF CMakeFiles\\cmTC_1cc42.dir\\src.cxx.o.d -o CMakeFiles/cmTC_1cc42.dir/src.cxx.o -c C:/Users/richa/OneDrive/Documents/ShapeLooker/build/WebAssembly_Qt_6_9_0_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-xecndr/src.cxx
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\richa\\emsdk\\upstream\\emscripten\\em++.bat -DQT_QML_DEBUG  CMakeFiles/cmTC_1cc42.dir/src.cxx.o -o cmTC_1cc42.js   && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules/FindEGL.cmake:128 (check_cxx_source_compiles)"
+      - "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake:39 (_qt_internal_find_third_party_dependencies)"
+      - "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake:43 (include)"
+      - "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:137 (find_dependency)"
+      - "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:45 (_qt_internal_find_qt_dependencies)"
+      - "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:43 (include)"
+      - "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/Qt6Config.cmake:212 (find_package)"
+      - "CMakeLists.txt:28 (find_package)"
+    checks:
+      - "Performing Test HAVE_EGL"
+    directories:
+      source: "C:/Users/richa/OneDrive/Documents/ShapeLooker/build/WebAssembly_Qt_6_9_0_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-bjhp37"
+      binary: "C:/Users/richa/OneDrive/Documents/ShapeLooker/build/WebAssembly_Qt_6_9_0_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-bjhp37"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/platforms;C:/Users/richa/emsdk/upstream/emscripten/cmake/Modules;C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6;C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/kwin;C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6;C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.9.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/kwin"
+      QT_ADDITIONAL_PACKAGES_PREFIX_PATH: ""
+      QT_CHAINLOAD_TOOLCHAIN_FILE: ""
+      QT_TOOLCHAIN_INCLUDE_FILE: ""
+      QT_TOOLCHAIN_RELOCATABLE_CMAKE_DIR: "C:/Qt/6.9.0/wasm_singlethread/lib/cmake"
+      QT_TOOLCHAIN_RELOCATABLE_PREFIX: ""
+    buildResult:
+      variable: "HAVE_EGL"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/richa/OneDrive/Documents/ShapeLooker/build/WebAssembly_Qt_6_9_0_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-bjhp37'
+        
+        Run Build Command(s): C:/Qt/Tools/Ninja/ninja.exe -v cmTC_cd0d9
+        [1/2] C:\\Users\\richa\\emsdk\\upstream\\emscripten\\em++.bat -DHAVE_EGL  -DQT_QML_DEBUG  -std=gnu++17 -MD -MT CMakeFiles/cmTC_cd0d9.dir/src.cxx.o -MF CMakeFiles\\cmTC_cd0d9.dir\\src.cxx.o.d -o CMakeFiles/cmTC_cd0d9.dir/src.cxx.o -c C:/Users/richa/OneDrive/Documents/ShapeLooker/build/WebAssembly_Qt_6_9_0_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-bjhp37/src.cxx
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\richa\\emsdk\\upstream\\emscripten\\em++.bat -DQT_QML_DEBUG  CMakeFiles/cmTC_cd0d9.dir/src.cxx.o -o cmTC_cd0d9.js   && cd ."
+        
+      exitCode: 0
+...

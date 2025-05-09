@@ -86,7 +86,8 @@ void DrawingBoard::mouseMoveEvent(QGraphicsSceneMouseEvent* event) {
 
 void DrawingBoard::mousePressEvent(QGraphicsSceneMouseEvent * event) {
     if (activeTool == "None" || activeTool == "Pan") {
-        QGraphicsItem::mousePressEvent(event);
+        // QGraphicsItem::mousePressEvent(event);
+        event->ignore();
         return;
     }
 
@@ -132,7 +133,8 @@ void DrawingBoard::mousePressEvent(QGraphicsSceneMouseEvent * event) {
 
 void DrawingBoard::mouseReleaseEvent(QGraphicsSceneMouseEvent* event) {
     if (activeTool == "None" || activeTool == "Pan") {
-        QGraphicsItem::mouseReleaseEvent(event);
+        // QGraphicsItem::mouseReleaseEvent(event);
+        event->ignore();
         return;
     }
 
@@ -157,11 +159,10 @@ void DrawingBoard::keyPressEvent(QKeyEvent *event) {
     if (event->key() == Qt::Key_Escape) {
         clearIncompleteDrawing();
     }
-    else if (event->key() == Qt::Key_Space) {
+    else if (event->key() == Qt::Key_Space && !event->isAutoRepeat()) {
         toolOnHold = activeTool;
         setTool("Pan");
-        event->accept();
-        return;  // Important to prevent further processing
+        return;
     }
     else {
         QGraphicsItem::keyPressEvent(event);
@@ -169,10 +170,9 @@ void DrawingBoard::keyPressEvent(QKeyEvent *event) {
 }
 
 void DrawingBoard::keyReleaseEvent(QKeyEvent * event) {
-    if (event->key() == Qt::Key_Space) {
+    if (event->key() == Qt::Key_Space && !event->isAutoRepeat()) {
         setTool(toolOnHold);
         toolOnHold = "None";
-        event->accept();
         return;
     }
     else {

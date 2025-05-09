@@ -454,6 +454,6 @@ C:/Users/richa/OneDrive/Documents/ShapeLooker/build/Desktop_Qt_6_9_0_MinGW_64_bi
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wctype.h \
+  C:/Users/richa/OneDrive/Documents/ShapeLooker/DrawableItem.h \
   C:/Users/richa/OneDrive/Documents/ShapeLooker/cylinder.h \
-  C:/Users/richa/OneDrive/Documents/ShapeLooker/drawableItem.h \
   C:/Users/richa/OneDrive/Documents/ShapeLooker/drawingboard.h
