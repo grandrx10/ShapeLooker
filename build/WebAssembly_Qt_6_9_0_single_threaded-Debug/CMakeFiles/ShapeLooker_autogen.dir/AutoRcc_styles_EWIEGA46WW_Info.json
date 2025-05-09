@@ -7,7 +7,18 @@
 	"CROSS_CONFIG" : false,
 	"GENERATOR" : "Ninja",
 	"INCLUDE_DIR" : "C:/Users/richa/OneDrive/Documents/ShapeLooker/build/WebAssembly_Qt_6_9_0_single_threaded-Debug/ShapeLooker_autogen/include",
-	"INPUTS" : [ "C:/Users/richa/OneDrive/Documents/ShapeLooker/styles/style.qss" ],
+	"INPUTS" : 
+	[
+		"C:/Users/richa/OneDrive/Documents/ShapeLooker/styles/style.qss",
+		"C:/Users/richa/OneDrive/Documents/ShapeLooker/assets/centercircle.png",
+		"C:/Users/richa/OneDrive/Documents/ShapeLooker/assets/grab.png",
+		"C:/Users/richa/OneDrive/Documents/ShapeLooker/assets/pen.png",
+		"C:/Users/richa/OneDrive/Documents/ShapeLooker/assets/erase.png",
+		"C:/Users/richa/OneDrive/Documents/ShapeLooker/assets/ellipse.png",
+		"C:/Users/richa/OneDrive/Documents/ShapeLooker/assets/rect.png",
+		"C:/Users/richa/OneDrive/Documents/ShapeLooker/assets/line.png",
+		"C:/Users/richa/OneDrive/Documents/ShapeLooker/assets/cursor.png"
+	],
 	"LOCK_FILE" : "C:/Users/richa/OneDrive/Documents/ShapeLooker/build/WebAssembly_Qt_6_9_0_single_threaded-Debug/CMakeFiles/ShapeLooker_autogen.dir/AutoRcc_styles_EWIEGA46WW_Lock.lock",
 	"MULTI_CONFIG" : false,
 	"OPTIONS" : [ "--no-zstd", "-name", "styles" ],

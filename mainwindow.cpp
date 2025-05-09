@@ -3,6 +3,7 @@
 
 #include <QPointF>
 #include <QDoubleValidator>
+#include <QButtonGroup>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -90,6 +91,36 @@ MainWindow::MainWindow(QWidget *parent)
         drawingBoard->setTool("Pan");
     });
 
+    // quick access buttons
+    auto connectToolButton = [this](QAbstractButton* button, const QString& toolName) {
+        button->setCheckable(true);
+        connect(button, &QAbstractButton::clicked, this, [this, toolName]() {
+            drawingBoard->setTool(toolName);
+        });
+    };
+    connectToolButton(ui->toolSelect, "None");
+    connectToolButton(ui->toolPan, "Pan");
+    connectToolButton(ui->toolErase, "Eraser");
+    connectToolButton(ui->toolLine, "Line");
+    connectToolButton(ui->toolRect, "Rect");
+    connectToolButton(ui->toolCircleCenter, "Center Circle");
+    connectToolButton(ui->toolCircleCorner, "Corner Circle");
+    connectToolButton(ui->toolPen, "Pen");
+
+    QButtonGroup* toolButtonGroup = new QButtonGroup(this);
+    toolButtonGroup->setExclusive(true);  // Critical: Only one button can be checked
+
+    // Add all tool buttons to the group
+    toolButtonGroup->addButton(ui->toolSelect);
+    toolButtonGroup->addButton(ui->toolPan);
+    toolButtonGroup->addButton(ui->toolErase);
+    toolButtonGroup->addButton(ui->toolLine);
+    toolButtonGroup->addButton(ui->toolRect);
+    toolButtonGroup->addButton(ui->toolCircleCenter);
+    toolButtonGroup->addButton(ui->toolCircleCorner);
+    toolButtonGroup->addButton(ui->toolPen);
+
+    setFocusPolicy(Qt::StrongFocus);
 }
 
 MainWindow::~MainWindow()

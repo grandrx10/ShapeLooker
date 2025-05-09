@@ -86,8 +86,7 @@ void DrawingBoard::mouseMoveEvent(QGraphicsSceneMouseEvent* event) {
 
 void DrawingBoard::mousePressEvent(QGraphicsSceneMouseEvent * event) {
     if (activeTool == "None" || activeTool == "Pan") {
-        // QGraphicsItem::mousePressEvent(event);
-        event->ignore();
+        QGraphicsItem::mousePressEvent(event);
         return;
     }
 
@@ -133,8 +132,8 @@ void DrawingBoard::mousePressEvent(QGraphicsSceneMouseEvent * event) {
 
 void DrawingBoard::mouseReleaseEvent(QGraphicsSceneMouseEvent* event) {
     if (activeTool == "None" || activeTool == "Pan") {
-        // QGraphicsItem::mouseReleaseEvent(event);
-        event->ignore();
+        QGraphicsItem::mouseReleaseEvent(event);
+
         return;
     }
 
@@ -171,6 +170,9 @@ void DrawingBoard::keyPressEvent(QKeyEvent *event) {
 
 void DrawingBoard::keyReleaseEvent(QKeyEvent * event) {
     if (event->key() == Qt::Key_Space && !event->isAutoRepeat()) {
+        if (activeTool != "Pan") {
+            return;
+        }
         setTool(toolOnHold);
         toolOnHold = "None";
         return;

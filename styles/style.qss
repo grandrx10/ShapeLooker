@@ -107,6 +107,10 @@ QPushButton:pressed {
     background-color: rgb(52, 162, 188);
 }
 
+QToolButton:checked {
+   border: 2px solid palette(dark);
+}
+
 
 /* ==================== */
 /* COMBO BOXES          */

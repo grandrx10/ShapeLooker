@@ -1,5 +1,13 @@
 <RCC>
     <qresource prefix="/">
         <file>styles/style.qss</file>
+        <file>assets/cursor.png</file>
+        <file>assets/grab.png</file>
+        <file>assets/erase.png</file>
+        <file>assets/line.png</file>
+        <file>assets/rect.png</file>
+        <file>assets/centercircle.png</file>
+        <file>assets/ellipse.png</file>
+        <file>assets/pen.png</file>
     </qresource>
 </RCC>
