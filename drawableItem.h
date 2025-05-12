@@ -11,6 +11,7 @@
 class DrawableItem {
 public:
     explicit DrawableItem(): owner(nullptr) {};
+    DrawableItem(QPointF p1, QPointF p2, DrawingBoard * drawingBoard) : point1(p1), point2(p2), owner(drawingBoard){}
     virtual ~DrawableItem() = default;
     virtual void draw(QPainter * painter) = 0;
     void setPoint1(QPointF point) {
@@ -56,6 +57,11 @@ public:
 
         return point.x() >= left && point.x() <= right &&
                point.y() >= top && point.y() <= bottom;
+    }
+
+    virtual QList<DrawableItem *> partialEraseAt(QPointF point, int radius, bool& erase, bool& repeat){
+        QList<DrawableItem *> items;
+        return items;
     }
 
     bool isDeletable() {

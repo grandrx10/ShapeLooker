@@ -11,9 +11,10 @@ public:
     void addSplinePoint(QPointF point);
 
     bool contains(QPointF point) override;
+    QList<DrawableItem *> partialEraseAt(QPointF point, int radius, bool& erase, bool& repeat) override;
 
 private:
-    bool lineSegmentContains(QPointF segP1, QPointF segP2, QPointF point);
+    bool lineSegmentContains(QPointF segP1, QPointF segP2, QPointF point, int radius);
     QList<QPointF> splinePoints;
 };
 

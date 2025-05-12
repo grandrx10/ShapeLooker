@@ -10,6 +10,7 @@ public:
     void setType (QString type);
     QJsonObject save() override;
     bool contains(QPointF point) override;
+    QList<DrawableItem *> partialEraseAt(QPointF point, int radius, bool& erase, bool& repeat) override;
 private:
     QString type;
 };

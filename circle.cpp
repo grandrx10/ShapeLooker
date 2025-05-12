@@ -1,4 +1,5 @@
 #include "circle.h"
+#include "pen.h"
 
 void Circle::draw(QPainter* painter) {
     // Complete drawing
@@ -45,6 +46,51 @@ bool Circle::contains(QPointF point) {
 
         return (x*x)/(a*a) + (y*y)/(b*b) <= 1.0;
     }
+}
+
+QList<DrawableItem *> Circle::partialEraseAt(QPointF point, int radius, bool& erase, bool& repeat) {
+    QList<DrawableItem *> items;
+    Pen* pen = new Pen();
+    pen->setOwner(owner);
+
+    if (type == "Corner") {
+        // Corner-to-corner circle (ellipse in rectangle)
+        QRectF rect(point1, point2);
+        qreal a = rect.width() / 2.0;
+        qreal b = rect.height() / 2.0;
+        QPointF center = rect.center();
+
+        // Generate points along the ellipse
+        const int numPoints = 36; // Points per full circle
+        for (int i = 0; i <= numPoints; i++) {
+            qreal angle = 2 * M_PI * i / numPoints;
+            QPointF p(
+                center.x() + a * cos(angle),
+                center.y() + b * sin(angle)
+                );
+            pen->addSplinePoint(p);
+        }
+    }
+    else if (type == "Center") {
+        // Center-radius circle
+        qreal r = QLineF(point1, point2).length();
+
+        // Generate points along the circle
+        const int numPoints = 36; // Points per full circle
+        for (int i = 0; i <= numPoints; i++) {
+            qreal angle = 2 * M_PI * i / numPoints;
+            QPointF p(
+                point1.x() + r * cos(angle),
+                point1.y() + r * sin(angle)
+                );
+            pen->addSplinePoint(p);
+        }
+    }
+
+    items.append(pen);
+    erase = true;
+    repeat = true;
+    return items;
 }
 
 void Circle::setType(QString circType) {

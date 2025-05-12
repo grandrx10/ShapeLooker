@@ -14,25 +14,13 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout_2">
+   <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
        <layout class="QGridLayout" name="gridLayout">
-        <item row="0" column="0">
-         <widget class="QLabel" name="label">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>Space</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QComboBox" name="comboSpace">
+        <item row="2" column="1">
+         <widget class="QComboBox" name="comboModel">
           <property name="font">
            <font>
             <pointsize>12</pointsize>
@@ -52,36 +40,6 @@
           </property>
          </widget>
         </item>
-        <item row="1" column="1">
-         <widget class="QComboBox" name="comboUnits">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="0">
-         <widget class="QLabel" name="label_3">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>Model</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="QComboBox" name="comboModel">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-         </widget>
-        </item>
         <item row="3" column="0">
          <widget class="QLabel" name="labelP1">
           <property name="font">
@@ -94,8 +52,29 @@
           </property>
          </widget>
         </item>
-        <item row="3" column="1">
-         <widget class="QLineEdit" name="leP1">
+        <item row="0" column="1">
+         <widget class="QComboBox" name="comboSpace">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Space</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="comboUnits">
           <property name="font">
            <font>
             <pointsize>12</pointsize>
@@ -112,6 +91,27 @@
           </property>
           <property name="text">
            <string>Height</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="leP1">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_3">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Model</string>
           </property>
          </widget>
         </item>
@@ -147,9 +147,9 @@
        </widget>
       </item>
       <item>
-       <layout class="QVBoxLayout" name="verticalLayout">
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout">
           <item>
            <spacer name="horizontalSpacer_4">
             <property name="orientation">
@@ -164,104 +164,112 @@
            </spacer>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout">
-            <item>
-             <widget class="QToolButton" name="toolSelect">
-              <property name="text">
-               <string>...</string>
-              </property>
-              <property name="icon">
-               <iconset>
-                <selectedon>:/assets/cursor.png</selectedon>
-               </iconset>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QToolButton" name="toolPan">
-              <property name="text">
-               <string>...</string>
-              </property>
-              <property name="icon">
-               <iconset>
-                <selectedon>:/assets/grab.png</selectedon>
-               </iconset>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QToolButton" name="toolErase">
-              <property name="text">
-               <string>...</string>
-              </property>
-              <property name="icon">
-               <iconset>
-                <selectedon>:/assets/erase.png</selectedon>
-               </iconset>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QToolButton" name="toolLine">
-              <property name="text">
-               <string>...</string>
-              </property>
-              <property name="icon">
-               <iconset>
-                <selectedon>:/assets/line.png</selectedon>
-               </iconset>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QToolButton" name="toolRect">
-              <property name="text">
-               <string>...</string>
-              </property>
-              <property name="icon">
-               <iconset>
-                <selectedon>:/assets/rect.png</selectedon>
-               </iconset>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QToolButton" name="toolCircleCenter">
-              <property name="text">
-               <string>...</string>
-              </property>
-              <property name="icon">
-               <iconset>
-                <selectedon>:/assets/centercircle.png</selectedon>
-               </iconset>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QToolButton" name="toolCircleCorner">
-              <property name="text">
-               <string>...</string>
-              </property>
-              <property name="icon">
-               <iconset>
-                <selectedon>:/assets/ellipse.png</selectedon>
-               </iconset>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QToolButton" name="toolPen">
-              <property name="text">
-               <string>...</string>
-              </property>
-              <property name="icon">
-               <iconset>
-                <selectedon>:/assets/pen.png</selectedon>
-               </iconset>
-              </property>
-             </widget>
-            </item>
-           </layout>
+           <widget class="QToolButton" name="toolSelect">
+            <property name="text">
+             <string>...</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <selectedon>:/assets/cursor.png</selectedon>
+             </iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="toolPan">
+            <property name="text">
+             <string>...</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <selectedon>:/assets/grab.png</selectedon>
+             </iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="toolErase">
+            <property name="text">
+             <string>...</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <selectedon>:/assets/erase.png</selectedon>
+             </iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="toolPartialErase">
+            <property name="text">
+             <string>...</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <selectedon>:/assets/partialErase.png</selectedon>
+             </iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="toolLine">
+            <property name="text">
+             <string>...</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <selectedon>:/assets/line.png</selectedon>
+             </iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="toolRect">
+            <property name="text">
+             <string>...</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <selectedon>:/assets/rect.png</selectedon>
+             </iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="toolCircleCenter">
+            <property name="text">
+             <string>...</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <selectedon>:/assets/centercircle.png</selectedon>
+             </iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="toolCircleCorner">
+            <property name="text">
+             <string>...</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <selectedon>:/assets/ellipse.png</selectedon>
+             </iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="toolPen">
+            <property name="text">
+             <string>...</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <selectedon>:/assets/pen.png</selectedon>
+             </iconset>
+            </property>
+           </widget>
           </item>
           <item>
            <spacer name="horizontalSpacer_3">
@@ -278,10 +286,10 @@
           </item>
          </layout>
         </item>
-        <item>
+        <item row="1" column="0">
          <widget class="ShapeLookerGraphicsView" name="graphicsView"/>
         </item>
-        <item>
+        <item row="2" column="0">
          <widget class="QLabel" name="labelTool">
           <property name="font">
            <font>
@@ -296,7 +304,7 @@
           </property>
          </widget>
         </item>
-        <item>
+        <item row="3" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout_2">
           <item>
            <spacer name="horizontalSpacer">
@@ -333,7 +341,7 @@
           </item>
          </layout>
         </item>
-        <item>
+        <item row="4" column="0">
          <spacer name="verticalSpacer">
           <property name="orientation">
            <enum>Qt::Orientation::Vertical</enum>
@@ -379,12 +387,19 @@
      <addaction name="actionCornerCircleTool"/>
      <addaction name="actionCenterCircleTool"/>
     </widget>
+    <widget class="QMenu" name="menuEraser">
+     <property name="title">
+      <string>Eraser</string>
+     </property>
+     <addaction name="actionEraseFull"/>
+     <addaction name="actionErasePartial"/>
+    </widget>
     <addaction name="actionNoTool"/>
     <addaction name="actionLineTool"/>
     <addaction name="actionRectTool"/>
     <addaction name="menuDraw_Circle"/>
     <addaction name="actionPenTool"/>
-    <addaction name="actionEraserTool"/>
+    <addaction name="menuEraser"/>
     <addaction name="actionPanTool"/>
    </widget>
    <addaction name="menuFile"/>
@@ -411,11 +426,6 @@
     <string>Draw Rectangle</string>
    </property>
   </action>
-  <action name="actionEraserTool">
-   <property name="text">
-    <string>Eraser</string>
-   </property>
-  </action>
   <action name="actionNoTool">
    <property name="text">
     <string>No Tool</string>
@@ -439,6 +449,16 @@
   <action name="actionPanTool">
    <property name="text">
     <string>Pan</string>
+   </property>
+  </action>
+  <action name="actionEraseFull">
+   <property name="text">
+    <string>Full Erase</string>
+   </property>
+  </action>
+  <action name="actionErasePartial">
+   <property name="text">
+    <string>Partial Erase</string>
    </property>
   </action>
  </widget>

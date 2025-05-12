@@ -75,8 +75,11 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionCenterCircleTool, &QAction::triggered, this, [this]() {
         drawingBoard->setTool("Center Circle");
     });
-    connect(ui->actionEraserTool, &QAction::triggered, this, [this]() {
-        drawingBoard->setTool("Eraser");
+    connect(ui->actionEraseFull, &QAction::triggered, this, [this]() {
+        drawingBoard->setTool("Full Eraser");
+    });
+    connect(ui->actionErasePartial, &QAction::triggered, this, [this]() {
+        drawingBoard->setTool("Partial Eraser");
     });
     connect(ui->actionNoTool, &QAction::triggered, this, [this]() {
         drawingBoard->setTool("None");
@@ -100,7 +103,9 @@ MainWindow::MainWindow(QWidget *parent)
     };
     connectToolButton(ui->toolSelect, "None");
     connectToolButton(ui->toolPan, "Pan");
-    connectToolButton(ui->toolErase, "Eraser");
+    connectToolButton(ui->toolErase, "Full Eraser");
+    connectToolButton(ui->toolPartialErase, "Partial Eraser");
+
     connectToolButton(ui->toolLine, "Line");
     connectToolButton(ui->toolRect, "Rect");
     connectToolButton(ui->toolCircleCenter, "Center Circle");
@@ -114,13 +119,17 @@ MainWindow::MainWindow(QWidget *parent)
     toolButtonGroup->addButton(ui->toolSelect);
     toolButtonGroup->addButton(ui->toolPan);
     toolButtonGroup->addButton(ui->toolErase);
+    toolButtonGroup->addButton(ui->toolPartialErase);
     toolButtonGroup->addButton(ui->toolLine);
     toolButtonGroup->addButton(ui->toolRect);
     toolButtonGroup->addButton(ui->toolCircleCenter);
     toolButtonGroup->addButton(ui->toolCircleCorner);
     toolButtonGroup->addButton(ui->toolPen);
 
-    setFocusPolicy(Qt::StrongFocus);
+    // In your MainWindow constructor:
+    ui->graphicsView->setFocus();  // Make sure the view has focus
+    ui->graphicsView->setFocusPolicy(Qt::StrongFocus);  // Accept keyboard focus
+
 }
 
 MainWindow::~MainWindow()

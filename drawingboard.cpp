@@ -54,6 +54,26 @@ void DrawingBoard::deleteItemAt(QPointF point) {
     }
 }
 
+void DrawingBoard::partialEraseAt(QPointF point, int radius) {
+    for (int i = items.length() - 1; i >= 0; i -- ) {
+        if (items[i]->isDeletable()) {
+            bool erase = false;
+            bool repeat = false;
+            QList<DrawableItem *> newItems = items[i]->partialEraseAt(point, radius, erase, repeat);
+            if (erase) {
+                delete items[i];
+                items.remove(i);
+                for (int j = 0; j < newItems.length(); j ++) {
+                    items.append(newItems[j]);
+                }
+                if (repeat) {
+                    this->partialEraseAt(point, radius);
+                }
+            }
+        }
+    }
+}
+
 void DrawingBoard::hoverMoveEvent(QGraphicsSceneHoverEvent * event) {
     if (activeTool == "None" || activeTool == "Pan") {
         QGraphicsItem::hoverMoveEvent(event);
@@ -104,10 +124,15 @@ void DrawingBoard::mousePressEvent(QGraphicsSceneMouseEvent * event) {
             currentItem = new Circle();
             Circle* circle = dynamic_cast<Circle*>(currentItem);
             circle->setType("Corner");
-        } else if (activeTool == "Eraser") {
+        } else if (activeTool == "Full Eraser") {
             deleteItemAt(event->pos());
             return;
-        } else if (activeTool == "Pen") {
+        } else if (activeTool == "Partial Eraser") {
+            partialEraseAt(event->pos(), selectThreshold);
+            return;
+        }
+
+        else if (activeTool == "Pen") {
             currentItem = new Pen();
         }
 

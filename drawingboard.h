@@ -21,6 +21,7 @@ public:
     void setTool(QString tool);
     void clearIncompleteDrawing();
     void deleteItemAt(QPointF point);
+    void partialEraseAt(QPointF point, int radius);
     QJsonArray saveItems();
     void loadItems(QJsonArray items);
     QString swapDrawStyle();

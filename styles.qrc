@@ -9,5 +9,6 @@
         <file>assets/centercircle.png</file>
         <file>assets/ellipse.png</file>
         <file>assets/pen.png</file>
+        <file>assets/partialErase.png</file>
     </qresource>
 </RCC>
